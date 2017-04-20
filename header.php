@@ -13,10 +13,6 @@
           <a href="<?php bloginfo('wpurl');?>"><img id="header-logo" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/icon_outline.png"/></a>
           <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a></div>
 
-
-    <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
-
     <?php wp_head(); ?>
   </head>
 
