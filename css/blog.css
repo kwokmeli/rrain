@@ -114,14 +114,13 @@ h6, .h6 {
 }*/
 
 .blog-post-title {
-  padding-top: 20px;
   margin-left: 110px;
 }
 
 .blog-post-title a {
   font-size: 12pt;
   font-family: 'Helvetica' !important;
-  color: #141B30;
+  color: #1E2D5F;
   text-decoration: none;
 }
 
@@ -182,4 +181,21 @@ h6, .h6 {
   margin-left: 50px;
   margin-bottom: 20px;
   float: left;
+}
+
+.divider {
+  margin-left: 40px;
+  margin-right: 40px;
+  border-bottom: 1px solid #BEBEBE;
+}
+
+.material-icons {
+  float: right;
+  margin-top: -40px;
+  margin-right: 40px;
+	color: #BEBEBE;
+}
+
+.header-spacing {
+  margin-bottom: 35px;
 }
