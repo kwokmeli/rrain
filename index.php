@@ -8,6 +8,7 @@
       <div class="header-spacing"></div>
       <?php
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
+
 				get_template_part( 'content', get_post_format() ); ?>
         <i class="material-icons">&#xe315;</i>
         <div class="divider"></div>
