@@ -5,10 +5,15 @@
     <div class="col-sm-8 blog-main">
 
       <?php
-      if (have_posts()) : while(have_posts()) : the_post();
-        get_template_part('content', get_post_format());
-      endwhile; endif;
-      ?>
+			if ( have_posts() ) : while ( have_posts() ) : the_post();
+				get_template_part( 'content', get_post_format() );
+			endwhile; endif;
+			?>
+
+
+      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("mainPageWidget") ) : ?>
+      <?php endif;?>
+
 
       </div><!-- /.blog-main -->
     </div><!-- /.row -->
