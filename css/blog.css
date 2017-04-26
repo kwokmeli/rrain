@@ -199,3 +199,47 @@ h6, .h6 {
 .header-spacing {
   margin-bottom: 35px;
 }
+
+.pages {
+  padding-left: 200px;
+  padding-right: 200px;
+  font-family: "Helvetica";
+  color: #1E2D5F;
+  font-size: 10.5pt;
+}
+
+.col-sm-2, .col-sm-3, .col-sm-9 {
+	padding: 2px !important;
+}
+
+.col-centered{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+button {
+	background-color: #00823e;
+	color: white !important;
+	font-family:  'Helvetica' !important;
+	border: none !important;
+  height: 40px;
+  width: 175px;
+  font-weight: 600 !important;
+}
+
+button a {
+	color: white;
+  font-weight: bold !important;
+}
+
+button:hover {
+	background-color:#C20D2D;
+}
+
+.header-selection {
+  color: white;
+  font-family: 'Helvetica';
+  font-size: 16pt;
+  margin-top: -38px !important;
+  margin-left: 225px !important;
+}

@@ -15,7 +15,7 @@ if ( function_exists('register_sidebar') )
   )
 );
 
-// Link post titles on homepage to custom URLs 
+// Link post titles on homepage to custom URLs
 function print_post_title() {
 	global $post;
 	$thePostID = $post->ID;
