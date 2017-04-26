@@ -204,11 +204,20 @@ h6, .h6 {
   padding-left: 200px;
   padding-right: 200px;
   font-family: "Helvetica";
-  color: #1E2D5F;
+  color: black;
   font-size: 10.5pt;
 }
 
-.col-sm-2, .col-sm-3, .col-sm-9 {
+.pages a {
+  text-decoration: none;
+  color: #2665bd;
+}
+
+.pages a:hover {
+  color: black;
+}
+
+.col-sm-3 {
 	padding: 2px !important;
 }
 
@@ -242,4 +251,20 @@ button:hover {
   font-size: 16pt;
   margin-top: -38px !important;
   margin-left: 225px !important;
+}
+
+.cemp-v1-title {
+  color: #535559;
+  font-family: "Helvetica";
+  font-size: 28pt;
+  font-weight: 600 !important;
+}
+
+.cemp-v1-box {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  width: 500px;
+  border-color: red;
+  background: #cbd7ed;
 }
