@@ -7,17 +7,21 @@
     <?php wp_head(); ?>
 </head>
 <body>
-
+  <div class="cemp-v1-shadow"></div>
+<div class="header-spacing"></div>
 <div class="cemp-v1-box">
+  <div class="header-spacing"></div>
 <div class="cemp-v1-title"><?php echo get_the_title(); ?></div>
-<div class="pages">
+<div class="cemp-v1-content">
 <?php
     while ( have_posts() ) : the_post();
         the_content();
     endwhile;
 ?>
+<div class="header-spacing"></div>
 </div>
 </div>
+<div class="header-spacing"></div>
 <?php get_footer(); ?>
 </body>
 </html>

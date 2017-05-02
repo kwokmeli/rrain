@@ -258,13 +258,39 @@ button:hover {
   font-family: "Helvetica";
   font-size: 28pt;
   font-weight: 600 !important;
+  text-align: center;
 }
 
 .cemp-v1-box {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 0 auto;
   height: auto;
-  width: 500px;
-  border-color: red;
-  background: #cbd7ed;
+  border: 3px solid green;
+  width: 925px;
+  background-color: white;
+}
+
+.cemp-v1-shadow {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  height: inherit;
+  width: 925px;
+  background-color: grey;
+}
+
+.cemp-v1-content {
+  font-family: "Helvetica";
+  color: black;
+  font-size: 10.5pt;
+  line-height: 175%;
+  padding-left: 100px;
+}
+
+.cemp-v1-content a {
+  text-decoration: none;
+  color: #2665bd;
+  line-height: 175%;
+}
+
+.cemp-v1-content a:hover {
+  color: black;
 }
