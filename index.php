@@ -13,11 +13,6 @@
         <div class="divider"></div>
 			<?php endwhile; endif; ?>
 
-      <!-- TODO: Allows you to add widgets. Not needed?-->
-      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("mainPageWidget") ) : ?>
-      <?php endif;?>
-
-
       </div><!-- /.blog-main -->
     </div><!-- /.row -->
     <div class="header-spacing"></div>
