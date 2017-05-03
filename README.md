@@ -10,6 +10,14 @@
     * Field Label: Sub-menu Excerpt X, Field Name: sub-menu_excerpt_X, Field Type: Text, Field Instructions: Enter a brief (1 sentence) description of the sub-menu
     * Field Label: Sub-menu Link X, Field Name: sub-menu_link_X, Field Type: Text, Field Instructions: Enter the URL.
 
+## Moving Content
+* Under 'Tools' on the Wordpress dashboard, select 'Export'.
+* Save the XML file. On the new Wordpress dashboard, go to 'Tools' then 'Import' and upload the XML file.
+* Install the Advanced Custom Fields plugin and follow the above instructions if you haven't already.
+* Make sure to manually click 'Update' on all pages and posts to make imported material appear.
+* Any images will have to be re-uploaded.
+* Some content may not be exported/imported. Be sure to go through the site to make sure all desired content is present.
+
 ## Adding Content
 ### Homepage
 #### Editing the Titles
@@ -17,13 +25,13 @@ The titles (e.g. WA Weather Alerts, WA Traffic Map, etc.) are added by adding ne
 
 To add icons to the post titles, go to 'Edit Post' and add a thumbnail for the 'Featured Image'. Images should be resized to a height of 40px (Wordpress will scale the dimensions for you automatically).
 
-To choose where the post title links to, go to 'Edit Post' and under the 'Custom Fields' entry box, change the 'Name' to 'external_url' and paste the URL in the 'Value' box.
+On the 'Edit Post' page, click on the 'Screen Options' near the top of the page. Make sure that the 'Custom Fields' check box is checked. To choose where the post title links to, go to 'Edit Post' and under the 'Custom Fields' entry box, change the 'Name' to 'external_url' and paste the URL in the 'Value' box.
 
 ### Sub-menu Pages (e.g. Fire Resources)
 Sub-menu pages (e.g. Fire Resources, Infectious Diseases, etc.) are created by making new pages. To make a new sub-menu page, create a new page and select 'submenu-page' as the template under 'Page Attributes'. Enter the title, excerpt, and link information for all the sub-menu items you wish to enter. If you aren't using all 7, just leave the unused sections blank.
 
 ### About Page
-To add an About page, go to Pages and select 'about-page' as the template under 'Page Attributes'. Content for this page can be manually entered in through the content box provided within 'Edit Page' on Wordpress.
+To add an About page, go to Pages and select 'about-page' as the template under 'Page Attributes'. Content for this page can be manually entered in through the content box provided within 'Edit Page' on Wordpress. To make sure the RRAIN icon on the header links to the About Page, go to 'Custom Settings' on the left-hand side of the dashboard and enter the URL of the About Page. 
 
 ### CEMP Page
 To add a page whose layout looks like that of the CEMP page, go to Pages and select 'cemp-v1-page' as the template under 'Page Attributes'. Content for this page can be manually entered in through the content box provided within 'Edit Page' on Wordpress.

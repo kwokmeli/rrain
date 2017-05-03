@@ -10,7 +10,7 @@
 
     <title><?php echo get_bloginfo('name'); ?></title>
     <div class="container">
-          <a href="<?php bloginfo('wpurl');?>"><img id="header-logo" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/icon_outline.png"/></a>
+          <a href="<?php echo get_option('about')?>"><img id="header-logo" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/icon_outline.png"/></a>
           <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a></div>
 
     <?php wp_head(); ?>
