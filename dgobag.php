@@ -5,11 +5,6 @@
 
 <?php get_header(); ?>
 <div class="header-selection"><?php echo get_the_title(); ?></div>
-<div class="header-spacing"></div>
-<div class="pages">
-<?php echo get_post_field('post_content', $post->ID); ?>
-</div>
-
 
 <?php if ( get_field('sub-menu_title_1') !== "" ) { ?>
   <div class="dgobag-image"><img src=<?php the_field('sub-menu_image_1');?>></div>
