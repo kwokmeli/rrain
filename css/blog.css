@@ -243,6 +243,7 @@ button a {
 
 button:hover {
 	background-color:#C20D2D;
+  cursor: pointer;
 }
 
 .header-selection {
