@@ -324,15 +324,34 @@ button:hover {
 }
 
 .dgobag-info {
-  margin-left: 120px;
-  margin-top: -75px;
+  margin: -85px 100px 4px 155px;
+  font-size: 10.5pt;
+  font-family: 'Helvetica' !important;
+  color: black;
+  text-decoration: none;
 }
 
-.dgobag-ios {
-  display: inline-block;
-  margin-top: -60px;
+.dgobag-info a {
+  text-decoration: none;
+  color: #1E2D5F;
+  font-size: 12pt;
+  font-weight: 600;
 }
 
-.dgobag-icon {
+.dgobag-buttons {
+  margin-left: 155px;
+  margin-top: -15px;
+}
 
+.dgobag-text {
+  margin-bottom: 3px;
+}
+
+.dgobag-icons {
+  margin-right: 17px;
+}
+
+.dgobag-image {
+  margin-top: 40px;
+  margin-left: 50px;
 }

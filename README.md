@@ -31,7 +31,10 @@ On the 'Edit Post' page, click on the 'Screen Options' near the top of the page.
 Sub-menu pages (e.g. Fire Resources, Infectious Diseases, etc.) are created by making new pages. To make a new sub-menu page, create a new page and select 'submenu-page' as the template under 'Page Attributes'. Enter the title, excerpt, and link information for all the sub-menu items you wish to enter. If you aren't using all 7, just leave the unused sections blank.
 
 ### About Page
-To add an About page, go to Pages and select 'about-page' as the template under 'Page Attributes'. Content for this page can be manually entered in through the content box provided within 'Edit Page' on Wordpress. To make sure the RRAIN icon on the header links to the About Page, go to 'Custom Settings' on the left-hand side of the dashboard and enter the URL of the About Page. 
+To add an About page, go to Pages and select 'about-page' as the template under 'Page Attributes'. Content for this page can be manually entered in through the content box provided within 'Edit Page' on Wordpress. To make sure the RRAIN icon on the header links to the About Page, go to 'Custom Settings' on the left-hand side of the dashboard and enter the URL of the About Page.
 
 ### CEMP Page
 To add a page whose layout looks like that of the CEMP page, go to Pages and select 'cemp-v1-page' as the template under 'Page Attributes'. Content for this page can be manually entered in through the content box provided within 'Edit Page' on Wordpress.
+
+### Digital Go Bag Page
+Icons on the left side should be approximately 80px tall (Wordpress will scale oversized images for you). To add content, follow the same process as the sub-menu pages above, except make sure to upload images for the icons in the custom fields section. 
