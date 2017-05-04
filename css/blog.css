@@ -322,3 +322,17 @@ button:hover {
   margin-right: -110px;
   margin-top: 20px;
 }
+
+.dgobag-info {
+  margin-left: 120px;
+  margin-top: -75px;
+}
+
+.dgobag-ios {
+  display: inline-block;
+  margin-top: -60px;
+}
+
+.dgobag-icon {
+
+}
