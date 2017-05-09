@@ -7,9 +7,9 @@
     <?php wp_head(); ?>
 </head>
 <body>
-  <div class="cemp-v1-shadow"></div>
+
 <div class="header-spacing"></div>
-<div class="cemp-v1-box">
+<div class="weather">
   <div class="header-spacing"></div>
 <div class="cemp-v1-title"><?php echo get_the_title(); ?></div>
 <div class="cemp-v1-content">

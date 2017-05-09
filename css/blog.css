@@ -262,22 +262,6 @@ button:hover {
   text-align: center;
 }
 
-.cemp-v1-box {
-  margin: 0 auto;
-  height: auto;
-  border: 3px solid green;
-  width: 925px;
-  background-color: white;
-}
-
-.cemp-v1-shadow {
-  margin-right: 20px;
-  margin-bottom: 20px;
-  height: inherit;
-  width: 925px;
-  background-color: grey;
-}
-
 .cemp-v1-content {
   font-family: "Helvetica";
   color: black;
@@ -358,7 +342,9 @@ button:hover {
 }
 
 .weather {
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 50px;
+  font-size: .8em;
+  border: 3px solid green;
+  margin: 15px;
+  padding: 0px 10px 5px 10px;
+  box-shadow: 10px 10px 5px #888888;
 }
