@@ -17,4 +17,4 @@
     </div><!-- /.row -->
     <div class="header-spacing"></div>
 
-    <?php wp_footer(); ?>
+    <?php get_footer(); ?>

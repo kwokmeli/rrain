@@ -290,6 +290,36 @@ button:hover {
   color: black;
 }
 
+.cemp-v2-content {
+  font-family: "Helvetica";
+  color: black;
+  font-size: 10.5pt;
+  font-weight: 600;
+  line-height: 145%;
+}
+
+.cemp-v2-content a {
+  text-decoration: none;
+  color: #2665bd;
+}
+
+.cemp-v2-breaker {
+  margin-right: 40px;
+  border-bottom: 1px solid #BEBEBE;
+}
+
+table {
+  table-layout: fixed;
+  width: auto;
+  margin: 0 auto;
+}
+
+th {
+  width: 200px;
+  font-weight: lighter;
+  border: 1px solid #BEBEBE;
+}
+
 .sub-menu_divider {
   margin-left: 50px;
   margin-right: 50px;

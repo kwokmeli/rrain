@@ -5,6 +5,7 @@
 <div class="header-spacing"></div>
 <div class="about-page">
 <?php echo get_post_field('post_content', $post->ID); ?>
+
 </div>
 
 <center><div class="col-sm-3 col-centered">
