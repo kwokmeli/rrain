@@ -200,6 +200,14 @@ h6, .h6 {
   margin-bottom: 35px;
 }
 
+.about-page {
+  font-family: "Helvetica";
+  color: black;
+  font-size: 10.5pt;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .pages {
   padding-left: 200px;
   padding-right: 200px;
@@ -252,6 +260,8 @@ button:hover {
   font-size: 16pt;
   margin-top: -38px !important;
   margin-left: 225px !important;
+  border: none !important;
+  overflow: hidden;
 }
 
 .cemp-v1-title {
@@ -267,7 +277,7 @@ button:hover {
   color: black;
   font-size: 10.5pt;
   line-height: 175%;
-  padding-left: 100px;
+  padding: 0px 30px 0px 30px;
 }
 
 .cemp-v1-content a {

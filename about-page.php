@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 <div class="header-selection"><?php echo get_the_title(); ?></div>
 <div class="header-spacing"></div>
-<div class="pages">
+<div class="about-page">
 <?php echo get_post_field('post_content', $post->ID); ?>
 </div>
 
