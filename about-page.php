@@ -3,6 +3,7 @@
 <?php get_header(); ?>
 <div class="header-selection"><?php echo get_the_title(); ?></div>
 <div class="header-spacing"></div>
+<center><a href="<?php bloginfo('wpurl');?>"><img src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/RRAIN_logo_rgb.png" style="width: 30%"/></a></center>
 <div class="about-page">
 <?php echo get_post_field('post_content', $post->ID); ?>
 
@@ -20,4 +21,4 @@
 <div class="header-spacing"></div>
 
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>
