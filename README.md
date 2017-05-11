@@ -1,6 +1,8 @@
 ## Setup
 * Download and save the theme folder in wp-content/themes/
-* Download and activate the plugin [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
+  * Alternatively, download the files and send them to a compressed zip folder. Under 'Appearance' -> 'Themes', click 'Add New' at the top and upload the zipped file.
+* Download and activate the plugin [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/).
+  * If you are moving a previous version of the site to a new site, you can export the custom fields ('Custom Fields' -> 'Export' -> 'Export to XML'). Otherwise, follow the steps below.
   * After activating the plugin, from the main Wordpress admin panel go to 'Custom Fields' (located on the right-most panel)
   * Select 'Add New' at the top (should be next to 'Field Groups')
   * Enter the title in the format of 'Sub-menu Items X', where X is a number from 1 through 7. You will be repeating the steps below 7 times to make 7 different field groups.
@@ -40,4 +42,4 @@ To add an About page, go to Pages and select 'about-page' as the template under 
 To add a page whose layout looks like that of the CEMP page, go to Pages and select 'cemp-v1-page' as the template under 'Page Attributes'. Content for this page can be manually entered in through the content box provided within 'Edit Page' on Wordpress.
 
 ### Digital Go Bag Page
-Icons on the left side should be approximately 80px tall (Wordpress will scale oversized images for you). To add content, follow the same process as the sub-menu pages above, except make sure to upload images for the icons in the custom fields section.
+Icons on the left side should be approximately 80px tall (Wordpress will scale oversized images for you). To add content, follow the same process as the sub-menu pages above. In addition, make sure to upload images for the icons and corresponding links for the Apple/Google play store in the custom fields section.

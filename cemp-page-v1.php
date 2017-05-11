@@ -9,7 +9,7 @@
 <body>
 
 <div class="header-spacing"></div>
-<center><img src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/RRAIN_logo_rgb.png"></center>
+<center><img src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/RRAIN_logo_rgb.png" style="width: 50%"/></center>
 <div class="weather">
   <div class="header-spacing"></div>
 <div class="cemp-v1-title"><?php echo get_the_title(); ?></div>

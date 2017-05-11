@@ -11,12 +11,12 @@
   <tr>
     <th>Adams</th>
     <th><a href="http://www.co.adams.wa.us/document_center/Building/Adams%20County%20Comprehensive%20Plan.pdf">CEMP</a></th>
-    <th><a href="">Hazard Mitigation</a></th>
+    <th>Hazard Mitigation</th>
     <th><a href="http://www.co.adams.wa.us/departments/emergency_services/index.php">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Asotin</th>
-    <th><a href="">CEMP</a></th>
+    <th>CEMP</th>
     <th><a href="http://www.co.asotin.wa.us/emergency-services/hazard-mitigation/">Hazard Mitigation</a></th>
     <th><a href="http://www.co.asotin.wa.us/emergency-services/">Emergency Services</a></th>
   </tr>
@@ -33,6 +33,12 @@
     <th><a href="http://www.co.chelan.wa.us/sheriff/pages/emergency-management?parent=Units">Emergency Services</a></th>
   </tr>
   <tr>
+    <th>Clallum</th>
+    <th><a href="http://clallam.net/EmergencyManagement/cemp.html">CEMP</a></th>
+    <th><a href="http://clallam.net/EmergencyManagement/hazardmitigationplan.html">Hazard Mitigation</a></th>
+    <th><a href="http://clallam.net/EmergencyManagement/">Emergency Services</a></th>
+  </tr>
+  <tr>
     <th>Clark</th>
     <th><a href="http://cresa911.org/wp-content/uploads/2014/06/cemp.pdf">CEMP</a></th>
     <th><a href="http://cresa911.org/emergency-management/mitigation/">Hazard Mitigation</a></th>
@@ -40,8 +46,8 @@
   </tr>
   <tr>
     <th>Columbia</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation</a></th>
+    <th>CEMP</th>
+    <th>Hazard Mitigation</th>
     <th><a href="http://www.columbiaco.com/index.aspx?NID=77">Emergency Services</a></th>
   </tr>
   <tr>
@@ -52,14 +58,14 @@
   </tr>
   <tr>
     <th>Douglas</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation</a></th>
+    <th>CEMP</th>
+    <th>Hazard Mitigation</th>
     <th><a href="http://www.douglascountywa.net/departments/emergency-management">Emergency Servcies</a></th>
   </tr>
   <tr>
     <th>Ferry</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation</a></th>
+    <th>CEMP</th>
+    <th>Hazard Mitigation</th>
     <th><a href="http://access.wa.gov/emergencycontact/county/Ferry">Emergency Services</a></th>
   </tr>
   <tr>
@@ -71,14 +77,14 @@
   <tr>
     <th>Garfield</th>
     <th><a href="http://co.garfield.wa.us/sites/co.garfield.wa.us/files/File/emergencymgmt/EmergencyMgmtPlan.pdf">CEMP</a></th>
-    <th><a href="">Hazard Mitigation</a></th>
+    <th>Hazard Mitigation</th>
     <th><a href="http://www.co.garfield.wa.us/emergency-management/home">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Grant</th>
     <th><a href="http://www.grantcountywa.gov/SHERIFF/EM/EM/MISC/PDF/CEMP-2014/2014-CEMP-BASIC-COMPLETE-214-01-14.pdf">CEMP</a></th>
     <th><a href="http://www.grantcountywa.gov/SHERIFF/EM/EM/MISC/PDF/2013-Grant-County-Hazard-Mitigation-Plan-Update-Volume1-2013-12.pdf">Hazard Mitigation</a></th>
-    <th><a href="http://www.grantcountywa.gov/sheriff/EM/">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.grantcountywa.gov/sheriff/EM/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Grays Harbor</th>
@@ -119,7 +125,7 @@
   <tr>
     <th>Klickitat</th>
     <th><a href="http://www.klickitatcounty.org/documentcenter/view/262">CEMP</a></th>
-    <th><a href="">Hazard Mitigation</a></th>
+    <th>Hazard Mitigation</th>
     <th><a href="http://www.klickitatcounty.org/249/Emergency-Management">Emergency Services</a></th>
   </tr>
   <tr>
@@ -130,111 +136,111 @@
   </tr>
   <tr>
     <th>Lincoln</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th>CEMP</th>
+    <th>Hazard Mitigation</th>
+    <th><a href="http://access.wa.gov/emergencycontact/county/Lincoln">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Mason</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.co.mason.wa.us/forms/dem/emergency_management_plan.pdf">CEMP</a></th>
+    <th><a href="https://www.co.mason.wa.us/forms/dem/natural_hazard_mitigation_plan.pdf">Hazard Mitigation</a></th>
+    <th><a href="https://www.co.mason.wa.us/dem/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Okanogan</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://okanogandem.org/documents/CEMP%20BASIC%20PLAN.pdf">CEMP</a></th>
+    <th><a href="http://okanogandem.org/documents/AHMP/Okanogan%20County%20AHMP.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://okanogandem.org/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Pacific</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.co.pacific.wa.us/pcema/EMGraphics/Basic%20Plan.pdf">CEMP</a></th>
+    <th><a href="http://www.co.pacific.wa.us/pcema/PDF%20Files/Plans/Pacific%20County%20HMP%202010.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://www.co.pacific.wa.us/pcema/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Pend Oreille</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th>CEMP</th>
+    <th><a href="http://pendoreilleco.org/wp-content/uploads/2015/08/All-Hazard-Mitigation-Plan-Final-With-Signatures-2010_October-20.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://pendoreilleco.org/your-government/emergency-management/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Pierce</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.co.pierce.wa.us/DocumentCenter/View/22816">CEMP</a></th>
+    <th><a href="https://www.co.pierce.wa.us/DocumentCenter/View/7035">Hazard Mitigation</a></th>
+    <th><a href="http://www.co.pierce.wa.us/104/Emergency-Management">Emergency Services</a></th>
   </tr>
   <tr>
     <th>San Juan</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.sanjuandem.net/About/PDFs/CEMP.pdf">CEMP</a></th>
+    <th><a href="http://www.sanjuandem.net/About/PDFs/HazardMitigationPlan.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://joomla.sanjuandem.net/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Skagit</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.skagitcounty.net/EmergencyManagement/Documents/CEMP2013/CEMP2013.pdf">CEMP</a></th>
+    <th><a href="https://www.skagitcounty.net/Departments/EmergencyManagement/2008HazMitPlan.htm">Hazard Mitigation</a></th>
+    <th><a href="https://www.skagitcounty.net/Departments/EmergencyManagement/main.htm">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Skamania</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.skamaniacounty.org/community-development/files/2011/04/2007-Comp-Plan-BCC-Final_withfigures.pdf">CEMP</a></th>
+    <th><a href="http://ci.stevenson.wa.us/wp-content/uploads/2013/02/HazardMitigationPlan.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://www.skamania-dem.org/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Snohomish</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://snohomishcountywa.gov/DocumentCenter/Home/View/12967">CEMP</a></th>
+    <th><a href="http://snohomishcountywa.gov/2429/Hazard-Mitigation-Plan">Hazard Mitigation</a></th>
+    <th><a href="http://snohomishcountywa.gov/180/Emergency-Management">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Spokane</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.spokanecounty.org/1923/Comprehensive-Emergency-Management-Plan-">CEMP</a></th>
+    <th><a href="http://www.spokanecounty.org/1939/Mitigation-Plan">Hazard Mitigation</a></th>
+    <th><a href="http://www.spokanecounty.org/1460/Emergency-Management">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Stevens</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.co.stevens.wa.us/landservices/documents/Chapter1Planoverview.pdf">CEMP</a></th>
+    <th><a href="http://www.co.stevens.wa.us/landservices/documents/Chapter1Planoverview.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://access.wa.gov/emergencycontact/county/Stevens">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Thurston</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.co.thurston.wa.us/em/Plans_Reports/CEMP/ThurstonCEMP_Rev2013_Draft.pdf">CEMP</a></th>
+    <th><a href="http://www.co.thurston.wa.us/em/Plans_Reports/2009_Natural_Hazards_Mitigation_Plan_Thurston_Region_wThurstonAnnex.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://www.co.thurston.wa.us/em/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Wahkiakum</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th>CEMP</th>
+    <th>Hazard Mitigation</th>
+    <th><a href="http://www.co.wahkiakum.wa.us/dem.html">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Walla Walla</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.co.walla-walla.wa.us/departments/emd/cemprevision.shtml">CEMP</a></th>
+    <th><a href="http://www.co.walla-walla.wa.us/departments/emd/hivahmp.shtml">Hazard Mitigation</a></th>
+    <th><a href="http://www.co.walla-walla.wa.us/departments/emd/index.shtml">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Whatcom</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.whatcomready.org/wp-content/uploads/2012/06/Whatcom-County-CEMP-2008.pdf">CEMP</a></th>
+    <th><a href="http://www.whatcomready.org/wp-content/uploads/2011/11/NHMP_FINAL-Word-4-17-2012.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://www.whatcomready.org/">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Whitman</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.whitmancounty.org/Commis%5CIndex_Pages/PDF_Files/County%20Code_2009/May%202012/Chapter%202-24.pdf">CEMP</a></th>
+    <th><a href="http://www.whitmancounty.org/EmServices/PDFs/WCNHMP-Vol_1.pdf">Hazard Mitigation</a></th>
+    <th><a href="http://www.whitmancounty.org/Page.aspx?pn=Emergency+Management">Emergency Services</a></th>
   </tr>
   <tr>
     <th>Yakima</th>
-    <th><a href="">CEMP</a></th>
-    <th><a href="">Hazard Mitigation 1</a></th>
-    <th><a href="">Hazard Mititgation 2</a></th>
+    <th><a href="http://www.co.yakima.wa.us/DocumentCenter/View/1576">CEMP</a></th>
+    <th><a href="http://www.yakimacounty.us/DocumentCenter/Home/View/2937">Hazard Mitigation</a></th>
+    <th><a href="http://www.co.yakima.wa.us/350/Emergency-Management">Emergency Services</a></th>
   </tr>
 </table>
 </div>
