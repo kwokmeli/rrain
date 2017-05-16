@@ -1,6 +1,7 @@
 <?php /*Template Name: cemp-v2-page*/ ?>
 
 <?php get_header(); ?>
+<title><?php echo get_bloginfo('name'); ?></title>
 <div class="header-selection"><?php echo get_the_title(); ?></div>
 <div class="header-spacing"></div>
 
@@ -247,5 +248,17 @@
 
 <div class="header-spacing"></div>
 
+<footer class="blog-footer">
+  <a href="<?php echo get_option('about')?>">
+  <img id="foot-img" src="http://rrain.org/wp-content/uploads/2015/02/w.png" style="width: 8%"/>
+  <img id="foot-img" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/doh.jpg"style="width: 12%"/>
+  <img id="foot-img" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/nlm.png" style="width: 16.4%"/></a><br><br><br>
 
-<?php get_footer(); ?>
+<div class="footer-text">
+  RRAIN Washington is a joint project between the UW Health Sciences Library and the WA Department of Health
+  with funding support from the NLM Contract No. HHS-N-276-2014-00658-P<br>
+</div>
+
+  <div class="header-spacing"></div>
+</footer>
+<?php wp_footer(); ?>

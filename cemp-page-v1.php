@@ -8,8 +8,9 @@
 </head>
 <body>
 
+<title><?php echo get_the_title(); ?></title>
 <div class="header-spacing"></div>
-<center><a href="<?php bloginfo('wpurl');?>"><img src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/RRAIN_logo_rgb.png" style="height: 10%"/></a></center>
+<center><a href="<?php bloginfo('wpurl');?>"><img src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/RRAIN_logo_rgb.png" style="width: 39%"/></a></center>
 <div class="weather">
   <div class="header-spacing"></div>
 <div class="cemp-v1-title"><?php echo get_the_title(); ?></div>

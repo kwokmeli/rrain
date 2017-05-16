@@ -310,7 +310,7 @@ th {
 .weather {
   font-size: .8em;
   border: 3px solid green;
-  margin: 15px;
-  padding: 0px 10px 5px 10px;
+  margin: 25px;
+  padding: 0px 10px 15px 10px;
   box-shadow: 10px 10px 5px #888888;
 }
