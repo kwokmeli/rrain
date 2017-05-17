@@ -9,14 +9,19 @@
     <meta name="author" content="">
 
     <?php if (is_home()) {
-      ?> <title> <?php echo get_bloginfo('name'); ?> </title> <?php
+      ?> <title> <?php echo get_bloginfo('name'); ?> </title>
+      <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a></div>
+      <a href="<?php echo get_option('about')?>"><img id="index-header-logo" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/icon_outline.png"/></a><?php
     } else {
-      ?> <title> <?php echo get_the_title(); ?> </title> <?php
+      ?> <title> <?php echo get_the_title(); ?> </title>
+      <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a> &nbsp <div class="header-selection"><?php echo get_the_title(); ?></div></div>
+      <a href="<?php echo get_option('about')?>"><img id="header-logo" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/icon_outline.png"/></a>
+      <?php
     } ?>
 
-    <div class="container">
-          <a href="<?php echo get_option('about')?>"><img id="header-logo" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/icon_outline.png"/></a>
-          <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a></div>
+    <?php /*<a href="<?php echo get_option('about')?>"><img id="header-logo" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/icon_outline.png"/></a> */ ?>
+
+    <?php /* <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a> &nbsp&nbsp&nbsp <div class="header-selection"><?php echo get_the_title(); ?></div></div> */ ?>
 
     <?php wp_head(); ?>
   </head>

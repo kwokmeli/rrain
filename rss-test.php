@@ -2,7 +2,7 @@
 
 <?php /*
 Author: Kerry Kirk
-Description: Web scraper to obtain WA weather data. 
+Description: Web scraper to obtain WA weather data.
 */ ?>
 
 <?php get_header(); ?>
@@ -70,4 +70,4 @@ my_xml_parse($listurl);
 
 <div class="header-spacing"></div>
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>

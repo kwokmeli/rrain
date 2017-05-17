@@ -261,4 +261,4 @@
 
   <div class="header-spacing"></div>
 </footer>
-<?php wp_footer(); ?>
+<?php get_footer(); ?>

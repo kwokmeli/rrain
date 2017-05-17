@@ -3,6 +3,7 @@ body {
   position: absolute;
   width: 100%;
   background-color: white;
+  font-size: 16pt;
 }
 
 .blog-header {
@@ -12,11 +13,11 @@ body {
 .blog-title {
   background-color: #00823e;
 	color: white !important;
-  font-size: 16pt;
-  font-weight: 600;
+  font-size: 16pt !important;
+  font-weight: bold !important;
 	font-family:  'Helvetica' !important;
 	border: none !important;
-	padding: 13px;
+	padding: 13px 50px 13px 13px !important;
 }
 
 .blog-title a {
@@ -80,15 +81,23 @@ body {
 #header-logo {
   float: right;
   width: 45px;
-  height: auto;
-  margin-right: 30px;
-  margin-top: 10px;
+  margin-right: 15px !important;
+  margin-top: -50px;
+
+}
+
+#index-header-logo {
+  float: right;
+  width: 45px;
+  height: auto !important;
+  margin-right: 15px !important;
+  margin-top: -40px;
 }
 
 #foot-img {
   width: auto;
   height: auto;
-  max-height: 80px;
+  max-height: 50px;
   margin-right: 15pt;
 }
 
@@ -109,6 +118,7 @@ body {
   float: right;
   margin-top: -40px;
   margin-right: 40px;
+  padding-left: 15px;
 	color: #BEBEBE;
 }
 
@@ -179,11 +189,12 @@ button:hover {
 .header-selection {
   color: white;
   font-family: 'Helvetica';
-  font-size: 16pt;
-  margin-top: -38px !important;
-  margin-left: 225px !important;
+  font-size: 13pt !important;
+  font-weight: normal !important;
+  /*margin-top: -38px !important;
+  margin-left: 225px !important;*/
   border: none !important;
-  overflow: hidden;
+  padding-right: 25px;
 }
 
 .cemp-v1-title {
