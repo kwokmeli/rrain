@@ -27,6 +27,7 @@ body {
 
 .blog-post-title {
   margin-left: 110px;
+  padding-right: 90px;
 }
 
 .blog-post-title a {
@@ -34,14 +35,24 @@ body {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
+  width: 100%;
+  max-width: 10px;
+  position: relative;
+  padding-right: 90px;
 }
 
 .footer-text {
   max-width: 500px !important;
-  margin: 0 auto;
+  text-align: center !important;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: inline-block;
+  position: relative;
 }
 
 .blog-footer {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   font-family: sans-serif;
   font-size: 8pt;
   text-align: center;
@@ -102,9 +113,9 @@ body {
 }
 
 .featured_thumb img {
-  margin-top: -50px !important;
-  margin-left: 50px;
+  margin-top: -63px !important;
   margin-bottom: 20px;
+  margin-left: 50px;
   float: left;
 }
 
@@ -116,7 +127,7 @@ body {
 
 .material-icons {
   float: right;
-  margin-top: -40px;
+  margin-top: -50px;
   margin-right: 40px;
   padding-left: 15px;
 	color: #BEBEBE;
