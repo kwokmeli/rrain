@@ -2,9 +2,9 @@
 
 <footer class="blog-footer">
   <a href="<?php echo get_option('about')?>">
-  <img id="foot-img" src="http://rrain.org/wp-content/uploads/2015/02/w.png" style="height: 6%"/>
-  <img id="foot-img" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/doh.jpg"style="height: 6%"/>
-  <img id="foot-img" src="https://testing.hsl.washington.edu/tisha/rrain-test-site/img/nlm.png" style="height: 6%"/></a><br><br><br>
+  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/w.png" style="height: 6%"/>
+  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/doh.png"style="height: 6%"/>
+  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/nlm.png" style="height: 6%"/></a><br><br><br>
 
 <div class="footer-text">
   RRAIN Washington is a joint project between the UW Health Sciences Library and the WA Department of Health

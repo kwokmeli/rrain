@@ -13,14 +13,14 @@
   <br>
 
   <?php if ( get_field('ios-1') !== "" ) { ?>
-    <a href=<?php the_field('ios-1'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-ios.png" style="border: #ffffff 3px double"></a>
+    <a href=<?php the_field('ios-1'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-ios.png" style="border: #ffffff 3px double"></a>
     <?php if ( !(get_field('android-1') !== "") ) { ?>
       </div>
     <?php } ?>
   <?php } ?>
 
   <?php if ( get_field('android-1') !== "" ) { ?>
-    <a href=<?php the_field('android-1'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-android.png"></a></div>
+    <a href=<?php the_field('android-1'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
   <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
@@ -38,14 +38,14 @@
   <br>
 
   <?php if ( get_field('ios-2') !== "" ) { ?>
-    <a href=<?php the_field('ios-2'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-ios.png" style="border: #ffffff 3px double"></a>
+    <a href=<?php the_field('ios-2'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-ios.png" style="border: #ffffff 3px double"></a>
     <?php if ( !(get_field('android-2') !== "") ) { ?>
       </div>
     <?php } ?>
   <?php } ?>
 
   <?php if ( get_field('android-2') !== "" ) { ?>
-    <a href=<?php the_field('android-2'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-android.png"></a></div>
+    <a href=<?php the_field('android-2'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
   <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
@@ -63,14 +63,14 @@
   <br>
 
   <?php if ( get_field('ios-3') !== "" ) { ?>
-    <a href=<?php the_field('ios-3'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-ios.png" style="border: #ffffff 3px double"></a>
+    <a href=<?php the_field('ios-3'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-ios.png" style="border: #ffffff 3px double"></a>
     <?php if ( !(get_field('android-3') !== "") ) { ?>
       </div>
     <?php } ?>
   <?php } ?>
 
   <?php if ( get_field('android-3') !== "" ) { ?>
-    <a href=<?php the_field('android-3'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-android.png"></a></div>
+    <a href=<?php the_field('android-3'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
   <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
@@ -88,14 +88,14 @@
   <br>
 
   <?php if ( get_field('ios-4') !== "" ) { ?>
-    <a href=<?php the_field('ios-4'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-ios.png" style="border: #ffffff 3px double"></a>
+    <a href=<?php the_field('ios-4'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-ios.png" style="border: #ffffff 3px double"></a>
     <?php if ( !(get_field('android-4') !== "") ) { ?>
       </div>
     <?php } ?>
   <?php } ?>
 
   <?php if ( get_field('android-4') !== "" ) { ?>
-    <a href=<?php the_field('android-4'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-android.png"></a></div>
+    <a href=<?php the_field('android-4'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
   <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
@@ -113,14 +113,14 @@
   <br>
 
   <?php if ( get_field('ios-5') !== "" ) { ?>
-    <a href=<?php the_field('ios-5'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-ios.png" style="border: #ffffff 3px double"></a>
+    <a href=<?php the_field('ios-5'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-ios.png" style="border: #ffffff 3px double"></a>
     <?php if ( !(get_field('android-5') !== "") ) { ?>
       </div>
     <?php } ?>
   <?php } ?>
 
   <?php if ( get_field('android-5') !== "" ) { ?>
-    <a href=<?php the_field('android-5'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-android.png"></a></div>
+    <a href=<?php the_field('android-5'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
   <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
@@ -138,14 +138,14 @@
   <br>
 
   <?php if ( get_field('ios-6') !== "" ) { ?>
-    <a href=<?php the_field('ios-6'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-ios.png" style="border: #ffffff 3px double"></a>
+    <a href=<?php the_field('ios-6'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-ios.png" style="border: #ffffff 3px double"></a>
     <?php if ( !(get_field('android-6') !== "") ) { ?>
       </div>
     <?php } ?>
   <?php } ?>
 
   <?php if ( get_field('android-6') !== "" ) { ?>
-    <a href=<?php the_field('android-6'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-android.png"></a></div>
+    <a href=<?php the_field('android-6'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
   <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
@@ -163,14 +163,14 @@
   <br>
 
   <?php if ( get_field('ios-7') !== "" ) { ?>
-    <a href=<?php the_field('ios-7'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-ios.png" style="border: #ffffff 3px double"></a>
+    <a href=<?php the_field('ios-7'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-ios.png" style="border: #ffffff 3px double"></a>
     <?php if ( !(get_field('android-7') !== "") ) { ?>
       </div>
     <?php } ?>
   <?php } ?>
 
   <?php if ( get_field('android-7') !== "" ) { ?>
-    <a href=<?php the_field('android-7'); ?>><img src="<?php bloginfo('template_directory'); ?> /img/download-android.png"></a></div>
+    <a href=<?php the_field('android-7'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
   <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
