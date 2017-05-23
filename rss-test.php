@@ -7,9 +7,6 @@ Description: Web scraper to obtain WA weather data.
 
 <?php get_header(); ?>
 
-<div class="header-selection"><?php echo get_the_title(); ?></div>
-<div class="header-spacing"></div>
-
 <?php
 date_default_timezone_set('America/Los_Angeles');
 ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)');
