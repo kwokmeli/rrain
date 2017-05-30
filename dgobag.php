@@ -23,7 +23,6 @@
     <a href=<?php the_field('android-1'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
-  <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
   <br>
   <div class="sub-menu_divider"></div>
 <?php } ?>
@@ -48,7 +47,6 @@
     <a href=<?php the_field('android-2'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
-  <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
   <br>
   <div class="sub-menu_divider"></div>
 <?php } ?>
@@ -73,7 +71,6 @@
     <a href=<?php the_field('android-3'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
-  <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
   <br>
   <div class="sub-menu_divider"></div>
 <?php } ?>
@@ -98,7 +95,6 @@
     <a href=<?php the_field('android-4'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
-  <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
   <br>
   <div class="sub-menu_divider"></div>
 <?php } ?>
@@ -123,7 +119,6 @@
     <a href=<?php the_field('android-5'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
-  <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
   <br>
   <div class="sub-menu_divider"></div>
 <?php } ?>
@@ -148,7 +143,6 @@
     <a href=<?php the_field('android-6'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
-  <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
   <br>
   <div class="sub-menu_divider"></div>
 <?php } ?>
@@ -173,7 +167,6 @@
     <a href=<?php the_field('android-7'); ?>><img src="<?php bloginfo('template_directory'); ?>/img/download-android.png"></a></div>
   <?php } ?>
 
-  <div class="dgobag-icons"><i class="material-icons" style="margin-top: -50px">&#xe315;</i></div>
   <br>
   <div class="sub-menu_divider"></div>
 <?php } ?>

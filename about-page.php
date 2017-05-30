@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 <div class="header-selection"><?php echo get_the_title(); ?></div>
 
-<center><a href="<?php bloginfo('wpurl');?>"><img src="<?php bloginfo('template_directory'); ?>/img/rrain-logo.png" style="width: 42%"/></a></center>
+<center><a href="<?php bloginfo('wpurl');?>"><img id= "about-img" src="<?php bloginfo('template_directory'); ?>/img/rrain-logo.png" /></a></center>
 <div class="about-page">
 <?php echo get_post_field('post_content', $post->ID); ?>
 

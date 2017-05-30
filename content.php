@@ -4,7 +4,7 @@
 	<div class="featured_thumb">
 		<?php if ( has_post_thumbnail() ) {?>
 						<?php	the_post_thumbnail(); ?>
-					</div>
+	</div>
 
 					<div class="col-md-6">
 					</div> <!-- /.blog-post -->

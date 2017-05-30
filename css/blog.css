@@ -1,9 +1,10 @@
 body {
   margin: 0;
   position: absolute;
-  width: 100%;
   background-color: white;
   font-size: 16pt;
+  min-width: 300px;
+  width: 100% !important;
 }
 
 .blog-header {
@@ -39,13 +40,6 @@ body {
   max-width: 10px;
   position: relative;
   padding-right: 90px;
-}
-
-.featured_thumb img {
-  margin-top: -63px !important;
-  margin-bottom: 20px;
-  margin-left: 50px;
-  float: left;
 }
 
 .footer-text {
@@ -96,6 +90,16 @@ body {
   margin: 0 auto;
 }
 
+#about-img {
+  width: 42%;
+}
+
+@media screen and (min-width: 850px) {
+    #about-img {
+        width: 380px;
+    }
+}
+
 #header-logo {
   float: right;
   width: 45px;
@@ -117,6 +121,13 @@ body {
   height: auto;
   max-height: 50px;
   margin-right: 15pt;
+}
+
+.featured_thumb img {
+  margin-top: -63px !important;
+  margin-bottom: 20px !important;
+  margin-left: 50px;
+  float: left;
 }
 
 .divider {
@@ -293,7 +304,7 @@ th {
 .sub-menu_icons {
   float: right;
   margin-right: -110px;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .dgobag-info {
