@@ -35,15 +35,6 @@ function showPosition(position) {
     var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(lat).concat(",").concat(lng).concat("&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0");
     //x.innerHTML = "url: " + url;
 
-    var data = new XMLHttpRequest();
-    data.open("GET", url, true);
-    data.onreadystatechange = function () {
-      if (data.readyState == 4 && data.status == 200) {
-        var doc = data.responseXML;
-        x.innerHTML = doc;
-      }
-    };
-    data.send(null);
 
 }
 </script>

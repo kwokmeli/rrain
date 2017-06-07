@@ -21,6 +21,13 @@ body {
 	padding: 13px 50px 13px 13px !important;
 }
 
+.static-thumbs {
+  /*position: absolute;
+  margin-top: -823px;*/
+  float: inherit;
+
+}
+
 .blog-title a {
   color: white;
   text-decoration: none;
@@ -28,17 +35,17 @@ body {
 
 .blog-post-title {
   margin-left: 110px;
-  padding-right: 90px;
+  /*padding-right: 90px;*/
 }
 
 .blog-post-title a {
-  font-size: 12pt;
+  font-size: 13pt;
+  font-weight: bold;
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
   width: 100%;
   max-width: 10px;
-  position: relative;
   padding-right: 90px;
 }
 
