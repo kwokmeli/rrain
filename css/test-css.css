@@ -1,9 +1,9 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
   position: absolute;
   background-color: white;
   font-size: 16pt;
-  min-width: 300px;
   width: 100% !important;
 }
 
@@ -37,6 +37,7 @@ hr {
   font-weight: bold !important;
 	font-family:  'Helvetica' !important;
 	border: none !important;
+  width: 100%;
 	padding: 13px 50px 13px 13px !important;
 }
 
@@ -51,7 +52,7 @@ hr {
 ****************/
 
 .blog-footer {
-  padding-left: 15px !important;
+  padding-left: 20px !important;
   padding-right: 15px !important;
   font-family: sans-serif;
   font-size: 8pt;
@@ -89,9 +90,9 @@ hr {
 /* CSS for menu titles */
 .blog-post-title {
   margin-left: 110px;
-  margin-right: -30px;
+  margin-right: -130px;
   margin-top: -6px;
-  /*padding-right: 90px;*/
+
 }
 
 .blog-post-title a {
@@ -100,9 +101,8 @@ hr {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
-  width: 100%;
-  max-width: 10px;
-  padding-right: 90px;
+  position: relative;
+  display: inline-block;
 }
 
 /* CSS for grey line between menu titles */
@@ -117,11 +117,14 @@ hr {
 
 /* CSS for grey arrows */
 .material-icons {
-  float: right;
-  margin-top: -50px;
-  margin-right: 40px;
-  padding-left: 15px;
-	color: #BEBEBE;
+  position: absolute;
+  right: 0;
+  margin-right: 46px;
+  margin-top: 1080px;
+  display: inline-block;
+  padding-left: 15px !important;
+	/*color: #BEBEBE;*/
+  color: red;
 }
 
 /****************
@@ -201,7 +204,20 @@ hr {
 
 @media screen and (max-width: 571px) {
     .st12 {
-      position: absolute;
       margin-top: 1060px;
     }
+}
+
+@media screen and (max-width: 486px) {
+
+
+  .st12 {
+    margin-top: 1060px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .st12 {
+    margin-top: 1054px;
+  }
 }

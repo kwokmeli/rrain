@@ -9,7 +9,7 @@
   <div class="st1">
   <img src="<?php bloginfo('template_directory'); ?>/res/cloud.png" /><br>
   </div>
-  <i class="material-icons">&#xe315;</i>
+
   <div class="st2">
   <img src="<?php bloginfo('template_directory'); ?>/res/car.png" /><br>
   </div>
