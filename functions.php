@@ -1,7 +1,7 @@
 <?php
 // Add scripts and stylesheets
 function rrain_scripts() {
-	wp_enqueue_style('blog', get_template_directory_uri() . '/css/blog.css');
+	wp_enqueue_style('blog', get_template_directory_uri() . '/css/test-css.css');
 }
 
 // Create Custom Settings page

@@ -21,10 +21,11 @@ body {
 	padding: 13px 50px 13px 13px !important;
 }
 
-.static-thumbs {
+.st1 {
   /*position: absolute;
   margin-top: -823px;*/
-  float: inherit;
+  margin-top: -800px;
+
 
 }
 
@@ -55,7 +56,7 @@ body {
   padding-left: 35px;
   padding-right: 35px;
   display: inline-block;
-  position: relative;
+  /*position: relative;*/
 }
 
 .blog-footer {
