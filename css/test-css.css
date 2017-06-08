@@ -131,6 +131,10 @@ hr {
 *     Icons     *
 ****************/
 
+.container {
+  position: relative;
+}
+
 .st1 {
   position: absolute;
   margin-left: 42px;

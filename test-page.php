@@ -6,10 +6,10 @@
 
 <?php if (is_front_page()) {
   ?>
+  <div class="container">
   <div class="st1">
   <img src="<?php bloginfo('template_directory'); ?>/res/cloud.png" /><br>
   </div>
-
   <div class="st2">
   <img src="<?php bloginfo('template_directory'); ?>/res/car.png" /><br>
   </div>
@@ -43,7 +43,7 @@
   <div class="st12">
   <img src="<?php bloginfo('template_directory'); ?>/res/cityhall.png" /><br>
 </div>
-
+</div>
 
 <?php } ?>
 <div class="blog-post-title"><?php echo get_post_field('post_content', $post->ID); ?></div>
