@@ -140,83 +140,83 @@ hr {
   position: absolute;
   top: 0px;
   margin-left: 42px;
-  margin-top: 23px;
+  margin-top: 1.4em;
 }
 
 .st2 {
   position: absolute;
   top: 0px;
   margin-left: 43px;
-  margin-top: 122px;
+  margin-top: 6.05em;
 }
 
 .st3 {
   position: absolute;
   top: 0px;
   margin-left: 43px;
-  margin-top: 205px;
+  margin-top: 10em;
 }
 
 .st4 {
   position: absolute;
   top: 0px;
   margin-left: 43px;
-  margin-top: 303px;
+  margin-top: 14.7em;
 }
 
 .st5 {
   position: absolute;
   top: 0px;
   margin-left: 45px;
-  margin-top: 404px;
+  margin-top: 19.6em;
 }
 .st6 {
   position: absolute;
   top: 0px;
   margin-left: 47px;
-  margin-top: 492px;
+  margin-top: 23.9em;
 }
 
 .st7 {
   position: absolute;
   top: 0px;
   margin-left: 47px;
-  margin-top: 584px;
+  margin-top: 28.5em;
 }
 
 .st8 {
   position: absolute;
   top: 0px;
   margin-left: 45px;
-  margin-top: 689px;
+  margin-top: 33.3em;
 }
 
 .st9 {
   position: absolute;
   top: 0px;
   margin-left: 47px;
-  margin-top: 769px;
+  margin-top: 37.4em;
 }
 
 .st10 {
   position: absolute;
   top: 0px;
   margin-left: 45px;
-  margin-top: 867px;
+  margin-top: 42em;
 }
 
 .st11 {
   position: absolute;
   top: 0px;
   margin-left: 46px;
-  margin-top: 957px;
+  margin-top: 46.3em;
 }
 
 .st12 {
   position: absolute;
   top: 0px;
   margin-left: 45px;
-  margin-top: 1049px;
+  margin-top: 51em;
 }
 
 @media screen and (max-width: 571px) {
