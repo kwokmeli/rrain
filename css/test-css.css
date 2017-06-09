@@ -36,6 +36,14 @@ img {
   margin-top: -50px;
 }
 
+#header-logo {
+  float: right;
+  width: 45px;
+  height: auto !important;
+  margin-right: 15px !important;
+  margin-top: -61px;
+}
+
 /* CSS for green bar on header */
 .blog-title {
   background-color: #00823e;
@@ -52,6 +60,16 @@ img {
 .blog-title a {
   color: white;
   text-decoration: none;
+}
+
+/* CSS for sub-title on header */
+.header-selection {
+  color: white;
+  font-family: 'Helvetica';
+  font-size: 13pt !important;
+  font-weight: normal !important;
+  border: none !important;
+  padding-right: 25px;
 }
 
 /****************
@@ -94,12 +112,14 @@ img {
 *    Content    *
 ****************/
 
-/* CSS for menu titles */
+/* CSS for home page menu titles */
 .blog-post-title {
   margin-left: 40px;
-  /*margin-right: -130px;*/
   margin-top: -6px;
-  overflow: auto;
+  font-family: 'Helvetica' !important;
+  font-size: 11pt;
+  right: 10px;
+  position: absolute;
 }
 
 .blog-post-title a {
@@ -110,12 +130,28 @@ img {
   text-decoration: none;
   left: 110px;
   margin-top: 24px;
-  overflow: auto;
   margin-right: 25px;
   position: absolute;
+}
 
-  /*position: relative;*/
+/* CSS for non-home page sub-titles */
+.sub-title {
+  margin-left: 40px;
+  margin-top: -6px;
+  font-family: 'Helvetica' !important;
+  font-size: 11pt;
+}
 
+.sub-title a {
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: 'Helvetica' !important;
+  color: #1E2D5F;
+  text-decoration: none;
+  left: 40px;
+  margin-top: 24px;
+  margin-right: 25px;
+  position: absolute;
 }
 
 /* CSS for grey line between menu titles */
@@ -250,3 +286,4 @@ img {
     margin-top: 1054px;
   }
 }
+Contact GitHub API Training Shop Blog About
