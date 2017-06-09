@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<?php if (is_front_page()) {
+<!--<?php if (is_front_page()) {
   ?>
   <div class="container">
   <div class="st1">
@@ -43,7 +43,7 @@
   <div class="st12">
   <img src="<?php bloginfo('template_directory'); ?>/res/cityhall.png" /><br>
 </div>
-</div>
+</div>-->
 
 <?php } ?>
 <div class="blog-post-title"><?php echo get_post_field('post_content', $post->ID); ?></div>

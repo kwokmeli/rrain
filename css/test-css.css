@@ -8,13 +8,15 @@ html, body {
 }
 
 hr {
-
   border: none;
   height: 1px;
   color: #BEBEBE;
   background-color: #BEBEBE;
   margin-right: 40px;
-  margin-left: -66px;
+}
+
+img {
+  margin-top: -20px;
 }
 
 /****************
@@ -90,7 +92,7 @@ hr {
 
 /* CSS for menu titles */
 .blog-post-title {
-  margin-left: 110px;
+  margin-left: 40px;
   /*margin-right: -130px;*/
   margin-top: -6px;
 
