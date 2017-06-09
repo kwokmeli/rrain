@@ -5,18 +5,22 @@ html, body {
   background-color: white;
   font-size: 16pt;
   width: 100% !important;
+  display: inline-block;
 }
 
 hr {
   border: none;
   height: 1px;
-  color: #BEBEBE;
   background-color: #BEBEBE;
-  margin-right: 40px;
+  margin-right: 20px;
+  margin-left: -20px;
 }
 
 img {
-  margin-top: -20px;
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-right: 25px !important;
 }
 
 /****************
@@ -29,7 +33,7 @@ img {
   width: 45px;
   height: auto !important;
   margin-right: 15px !important;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 /* CSS for green bar on header */
@@ -95,7 +99,7 @@ img {
   margin-left: 40px;
   /*margin-right: -130px;*/
   margin-top: -6px;
-
+  overflow: auto;
 }
 
 .blog-post-title a {
@@ -104,8 +108,14 @@ img {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
-  position: relative;
-  display: inline-block;
+  left: 110px;
+  margin-top: 24px;
+  overflow: auto;
+  margin-right: 25px;
+  position: absolute;
+
+  /*position: relative;*/
+
 }
 
 /* CSS for grey line between menu titles */
