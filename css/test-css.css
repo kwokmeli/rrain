@@ -8,7 +8,8 @@ html, body {
   display: inline-block;
 }
 
-hr {
+/* CSS for dividers on index page */
+hr.main {
   border: none;
   height: 1px;
   background-color: #BEBEBE;
@@ -16,12 +17,44 @@ hr {
   margin-left: 20px;
 }
 
-img {
+/* CSS for dividers on non-index page */
+hr.side {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: -25px;
+  margin-left: -5px;
+}
+
+/* CSS for dividers on Digital Go Bag page */
+hr.dgobag {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: -25px;
+  margin-left: -25px;
+}
+
+img.home {
   position: relative;
   display: inline-block;
   top: 10px;
   margin-left: 40px;
   margin-right: 25px !important;
+}
+
+img.dgobag-logo {
+  position: relative;
+  top: 71px;
+}
+
+img.dgobag-apple {
+  border: 3px solid #ffffff;
+  margin-left: 100px;
+}
+
+img.dgobag-play {
+
 }
 
 /****************
@@ -34,7 +67,7 @@ img {
   width: 45px;
   height: auto !important;
   margin-right: 15px !important;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 /* CSS for RRAIN logo on header for non-index page */
@@ -43,7 +76,7 @@ img {
   width: 45px;
   height: auto !important;
   margin-right: 15px !important;
-  margin-top: -61px;
+  margin-top: -50px;
 }
 
 /* CSS for green bar on header */
@@ -54,7 +87,6 @@ img {
   font-weight: bold !important;
 	font-family:  'Helvetica' !important;
 	border: none !important;
-  /*width: 100%;*/
 	padding: 13px 50px 13px 13px !important;
 }
 
@@ -116,13 +148,6 @@ img {
 
 /* CSS for home page menu titles */
 .blog-post-title {
-  /*margin-left: 40px;
-  margin-top: -6px;
-  font-family: 'Helvetica' !important;
-  font-size: 11pt;
-  right: 10px;
-  position: absolute;*/
-
 }
 
 .blog-post-title a {
@@ -132,21 +157,17 @@ img {
   color: #1E2D5F;
   text-decoration: none;
   position: relative;
-
-  /*left: 110px;
-  margin-top: 24px;
-  margin-right: 25px;
-  position: absolute;*/
+  margin-right: 90px;
 }
 
 /* CSS for non-home page sub-titles */
 .sub-title {
-  /*margin-left: 40px;*/
   margin-top: -6px;
   font-family: 'Helvetica' !important;
   font-size: 11pt;
   position: relative;
-
+  margin-left: 25px;
+  margin-right: 50px;
 }
 
 .sub-title a {
@@ -155,130 +176,24 @@ img {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
-  /*left: 40px;*/
   margin-top: 24px;
 }
 
-/* CSS for grey arrows */
-.material-icons {
-  position: absolute;
-  right: 0;
-  margin-right: 46px;
-  margin-top: 1080px;
-  display: inline-block;
-  padding-left: 15px !important;
-	/*color: #BEBEBE;*/
-  color: red;
-}
-
-/****************
-*     Icons     *
-****************/
-
-.container {
+.dgobag {
+  margin-top: -6px;
+  font-family: 'Helvetica' !important;
+  font-size: 11pt;
   position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.st1 {
-  position: absolute;
-  top: 0px;
-  margin-left: 42px;
-  margin-top: 1.4em;
-}
+.dgobag a {
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: 'Helvetica' !important;
+  color: #1E2D5F;
+  text-decoration: none;
+  margin-top: 5px;
 
-.st2 {
-  position: absolute;
-  top: 0px;
-  margin-left: 43px;
-  margin-top: 6.05em;
 }
-
-.st3 {
-  position: absolute;
-  top: 0px;
-  margin-left: 43px;
-  margin-top: 10em;
-}
-
-.st4 {
-  position: absolute;
-  top: 0px;
-  margin-left: 43px;
-  margin-top: 14.7em;
-}
-
-.st5 {
-  position: absolute;
-  top: 0px;
-  margin-left: 45px;
-  margin-top: 19.6em;
-}
-.st6 {
-  position: absolute;
-  top: 0px;
-  margin-left: 47px;
-  margin-top: 23.9em;
-}
-
-.st7 {
-  position: absolute;
-  top: 0px;
-  margin-left: 47px;
-  margin-top: 28.5em;
-}
-
-.st8 {
-  position: absolute;
-  top: 0px;
-  margin-left: 45px;
-  margin-top: 33.3em;
-}
-
-.st9 {
-  position: absolute;
-  top: 0px;
-  margin-left: 47px;
-  margin-top: 37.4em;
-}
-
-.st10 {
-  position: absolute;
-  top: 0px;
-  margin-left: 45px;
-  margin-top: 42em;
-}
-
-.st11 {
-  position: absolute;
-  top: 0px;
-  margin-left: 46px;
-  margin-top: 46.3em;
-}
-
-.st12 {
-  position: absolute;
-  top: 0px;
-  margin-left: 45px;
-  margin-top: 51em;
-}
-
-@media screen and (max-width: 571px) {
-    .st12 {
-      margin-top: 1060px;
-    }
-}
-
-@media screen and (max-width: 486px) {
-
-
-  .st12 {
-    margin-top: 1060px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .st12 {
-    margin-top: 1054px;
-  }
-}
-Contact GitHub API Training Shop Blog About
