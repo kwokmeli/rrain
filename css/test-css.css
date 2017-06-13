@@ -1,5 +1,5 @@
 html, body {
-  margin: 0 !important;
+  margin: 0 auto;
   padding: 0 !important;
   position: relative;
   background-color: white;
@@ -13,13 +13,14 @@ hr {
   height: 1px;
   background-color: #BEBEBE;
   margin-right: 20px;
-  margin-left: -20px;
+  margin-left: 20px;
 }
 
 img {
   position: relative;
   display: inline-block;
   top: 10px;
+  margin-left: 40px;
   margin-right: 25px !important;
 }
 
@@ -36,6 +37,7 @@ img {
   margin-top: -50px;
 }
 
+/* CSS for RRAIN logo on header for non-index page */
 #header-logo {
   float: right;
   width: 45px;
@@ -114,12 +116,13 @@ img {
 
 /* CSS for home page menu titles */
 .blog-post-title {
-  margin-left: 40px;
+  /*margin-left: 40px;
   margin-top: -6px;
   font-family: 'Helvetica' !important;
   font-size: 11pt;
   right: 10px;
-  position: absolute;
+  position: absolute;*/
+
 }
 
 .blog-post-title a {
@@ -128,18 +131,22 @@ img {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
-  left: 110px;
+  position: relative;
+
+  /*left: 110px;
   margin-top: 24px;
   margin-right: 25px;
-  position: absolute;
+  position: absolute;*/
 }
 
 /* CSS for non-home page sub-titles */
 .sub-title {
-  margin-left: 40px;
+  /*margin-left: 40px;*/
   margin-top: -6px;
   font-family: 'Helvetica' !important;
   font-size: 11pt;
+  position: relative;
+
 }
 
 .sub-title a {
@@ -148,20 +155,8 @@ img {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
-  left: 40px;
+  /*left: 40px;*/
   margin-top: 24px;
-  margin-right: 25px;
-  position: absolute;
-}
-
-/* CSS for grey line between menu titles */
-.divider {
-  position: absolute;
-  width: 100%;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 89px;
-  border-bottom: 1px solid #BEBEBE;
 }
 
 /* CSS for grey arrows */
