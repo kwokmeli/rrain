@@ -8,6 +8,26 @@ html, body {
   display: inline-block;
 }
 
+button {
+	background-color: #00823e;
+	color: white !important;
+	font-family:  'Helvetica' !important;
+	border: none !important;
+  height: 40px;
+  width: 175px;
+  font-weight: 600 !important;
+}
+
+button a {
+	color: white;
+  font-weight: bold !important;
+}
+
+button:hover {
+	background-color:#C20D2D;
+  cursor: pointer;
+}
+
 h1 {
   color: #535559;
   font-family: "Helvetica";
@@ -160,7 +180,7 @@ img.dgobag-play {
 *    Content    *
 ****************/
 
-/* CSS for home page menu titles */
+/* CSS for index page menu titles */
 .blog-post-title {
 }
 
@@ -170,11 +190,13 @@ img.dgobag-play {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
-  position: relative;
-  margin-right: 90px;
+  position: absolute;
+
+  margin-top: 25px;
+  margin-right: 40px;
 }
 
-/* CSS for non-home page sub-titles */
+/* CSS for non-index page sub-titles */
 .sub-title {
   margin-top: -6px;
   font-family: 'Helvetica' !important;
@@ -225,10 +247,27 @@ img.dgobag-play {
   line-height: 175%;
 }
 
+/* CSS for a green box with shadow */
 .box {
   font-size: .8em;
   border: 3px solid green;
   margin: 25px;
   padding: 0px 10px 15px 10px;
   box-shadow: 10px 10px 5px #888888;
+}
+
+/* CSS for About page */
+.about {
+  font-family: "Helvetica";
+  color: black;
+  font-size: 10.5pt;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.about a {
+  text-decoration: none;
+  color: #2665bd;
 }
