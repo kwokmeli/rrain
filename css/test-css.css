@@ -36,15 +36,6 @@ h1 {
   text-align: center;
 }
 
-/* CSS for dividers on index page */
-/*hr.main {
-  border: none;
-  height: 1px;
-  background-color: #BEBEBE;
-  margin-right: 20px;
-  margin-left: 20px;
-}*/
-
 /* CSS for individual dividers on index page */
 hr.cloud {
   border: none;
@@ -160,15 +151,6 @@ hr.dgobag {
   margin-left: -155px;
 }
 
-/* CSS for images on index page */
-/*img.home {
-  position: relative;
-  display: inline-block;
-  top: 10px;
-  margin-left: 40px;
-  margin-right: 25px !important;
-}*/
-
 /* CSS for positioning individual images on index page */
 img.cloud {
   position: relative;
@@ -221,7 +203,7 @@ img.flood {
 img.earthquakes {
   position: relative;
   display: inline-block;
-  top: 10px;
+  top: 15px;
   margin-left: 40px;
   margin-right: 25px !important;
 }
@@ -245,7 +227,7 @@ img.chem {
 img.bag {
   position: relative;
   display: inline-block;
-  top: 10px;
+  top: 7px;
   margin-left: 40px;
   margin-right: 25px !important;
 }
@@ -483,50 +465,6 @@ img.dgobag-play {
 /****************
 *   Exceptions  *
 ****************/
-
-/*br.main {
-  line-height: 300%;
-}
-
-.images {
-  position: absolute;
-  margin-left: 20px;
-}
-
-.text {
-
-}
-
-.text a {
-  font-size: 13pt;
-  font-weight: bold;
-  font-family: 'Helvetica' !important;
-  color: #1E2D5F;
-  text-decoration: none;
-  position: absolute;
-  margin-left: 105px;
-  margin-top: 10px;
-  margin-right: 40px;
-}
-
-.container {
-  position: relative;
-  top: 20px;
-}
-
-.dividers {
-
-}
-
-hr.index {
-  border: none;
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 1px;
-  background-color: #BEBEBE;
-}*/
-
-/* Affected: CEMP */
 @media screen and (max-width: 551px) {
   img.cityhall {
     top: 25px;
@@ -534,5 +472,147 @@ hr.index {
 
   hr.cityhall {
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  img.cityhall {
+    top: 37px;
+  }
+
+  hr.cityhall {
+    margin-top: 49px;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  img.chem {
+    top: 23px;
+  }
+
+  hr.chem {
+    margin-top: 28px;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  img.wa {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  img.diseases {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  img.cityhall {
+    top: 46px;
+  }
+
+  hr.cityhall {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 302px) {
+  img.cloud {
+    top: 24px;
+  }
+
+  hr.cloud {
+    margin-top: 25px;
+  }
+
+  img.command {
+    top: 26px;
+  }
+
+  hr.command {
+    margin-top: 28px;
+  }
+
+  img.wa {
+    top: 20px;
+  }
+
+  hr.wa {
+    margin-top: 33px;
+  }
+}
+
+@media screen and (max-width: 291px) {
+  img.traffic {
+    top: 21px;
+  }
+
+  hr.traffic {
+    margin-top: 22px;
+  }
+
+  img.map {
+    top: 19px;
+  }
+
+  hr.map {
+    margin-top: 22px;
+  }
+}
+
+@media screen and (max-width: 287px) {
+  img.fire {
+    top: 23px;
+  }
+
+  hr.fire {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 286px) {
+  img.flood {
+    top: 22px;
+  }
+
+  hr.flood {
+    margin-top: 26px;
+  }
+
+  img.chem {
+    top: 36px;
+  }
+
+  hr.chem {
+    margin-top: 47px;
+  }
+
+  img.bag {
+    top: 15px;
+  }
+
+  hr.bag {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 279px) {
+  img.cityhall {
+    top: 56px;
+  }
+
+  hr.cityhall {
+    margin-top: 97px;
+  }
+}
+
+@media screen and (max-width: 268px) {
+  img.cloud {
+    top: 37px;
+  }
+
+  hr.cloud {
+    margin-top: 44px;
   }
 }

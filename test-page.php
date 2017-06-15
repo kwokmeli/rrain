@@ -6,43 +6,6 @@
         <div class="blog-post-title">
           <?php echo get_post_field('post_content', $post->ID); ?>
         </div>
-
-        <!-- <br>
-        <div class="container">
-          <div class="images">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/cloud.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/car.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/map.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/tree.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/headphone.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/waves.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/earthquake.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/users.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/radiation.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/bag.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/wa.png"/><br class="main"><br class="main">
-            <img class="images" src="<?php bloginfo('template_directory'); ?>/res/cityhall.png"/><br class="main"><br class="main">
-          </div>
-
-          <div class="text">
-            <a href="">WA Weather Alerts</a><br class="main"><hr class="index"/><br>
-            <a href="">WA Traffic Map</a><br class="main"><hr class="index"/><br>
-            <a href="">NWCC Fire Map</a><br class="main"><hr class="index"/><br>
-            <a href="">Fire Resources</a><br class="main"><hr class="index"/><br>
-            <a href="">Command Center</a><br class="main"><hr class="index"/><br>
-            <a href="">WA Flood Map</a><br class="main"><hr class="index"/><br>
-            <a href="">Earthquakes</a><br class="main"><hr class="index"/><br>
-            <a href="">Infectious Diseases</a><br class="main"><hr class="index"/><br>
-            <a href="">NLM Chemical and Radiation</a><br class="main"><hr class="index"/><br>
-            <a href="">Digital Go Bag</a><br class="main"><hr class="index"/><br>
-            <a href="">WA State Emergency Plan</a><br class="main"><hr class="index"/><br>
-            <a href="">County Emergency Management Plans (CEMP)</a><br class="main"><hr class="index"/><br>
-          </div>
-
-        </div>
-        <br>
-      -->
-
         <?php get_footer(); ?>
 <?php } else if ( is_page(102) ) { ?> <!-- CSS for Digital Go Bag page --> <!-- TODO: Switch out page ID -->
         <div class="dgobag">
