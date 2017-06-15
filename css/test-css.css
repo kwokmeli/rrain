@@ -465,6 +465,7 @@ img.dgobag-play {
 /****************
 *   Exceptions  *
 ****************/
+
 @media screen and (max-width: 551px) {
   img.cityhall {
     top: 25px;
@@ -509,7 +510,7 @@ img.dgobag-play {
   }
 
   hr.chem {
-    margin-top: 24px;s
+    margin-top: 24px;
   }
 }
 

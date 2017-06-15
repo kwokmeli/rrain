@@ -23,7 +23,7 @@ function custom_settings_page() { ?>
 // Put in URL to 'About' page
 function set_about() {?>
 	<input type="text" name="about" id="about" value="<?php echo get_option('about'); ?>"/>
-<?php }
+<?php }*/
 
 function custom_settings_page_setup() {
 	add_settings_section('section', 'All Settings', null, 'theme-options');
@@ -32,7 +32,7 @@ function custom_settings_page_setup() {
 }
 
 // Link post titles on homepage to custom URLs
-function print_post_title() {
+/*function print_post_title() {
 	global $post;
 	$thePostID = $post->ID;
 	$post_id = get_post($thePostID);
@@ -57,9 +57,9 @@ function print_post_title() {
 		$link = $perm;
 	}
 	echo '<h2 class="blog-post-title"><a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a></h2>';
-}
+}*/
 
-add_theme_support('post-thumbnails', array('post', 'page'));
+//add_theme_support('post-thumbnails', array('post', 'page'));
 add_action('admin_menu', 'custom_settings_add_menu');
 add_action('admin_init', 'custom_settings_page_setup');
 add_action('wp_enqueue_scripts', 'rrain_scripts');

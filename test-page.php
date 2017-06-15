@@ -1,4 +1,4 @@
-<?php /*Template Name: test-page*/ ?>
+<?php /*Template Name: Primary Template*/ ?>
 
 <?php get_header(); ?>
 
