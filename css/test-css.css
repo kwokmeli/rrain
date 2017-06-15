@@ -37,7 +37,104 @@ h1 {
 }
 
 /* CSS for dividers on index page */
-hr.main {
+/*hr.main {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}*/
+
+/* CSS for individual dividers on index page */
+hr.cloud {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.traffic {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.map {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.fire {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.command {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.flood {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.earthquakes {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.diseases {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.chem {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.bag {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.wa {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.cityhall {
   border: none;
   height: 1px;
   background-color: #BEBEBE;
@@ -64,7 +161,104 @@ hr.dgobag {
 }
 
 /* CSS for images on index page */
-img.home {
+/*img.home {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}*/
+
+/* CSS for positioning individual images on index page */
+img.cloud {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.traffic {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.map {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.fire {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.command {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.flood {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.earthquakes {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.diseases {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.chem {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.bag {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.wa {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.cityhall {
   position: relative;
   display: inline-block;
   top: 10px;
@@ -182,6 +376,7 @@ img.dgobag-play {
 
 /* CSS for index page menu titles */
 .blog-post-title {
+
 }
 
 .blog-post-title a {
@@ -190,7 +385,7 @@ img.dgobag-play {
   font-family: 'Helvetica' !important;
   color: #1E2D5F;
   text-decoration: none;
-
+  position: absolute;
   margin-top: 25px;
   margin-right: 40px;
 }
@@ -289,7 +484,7 @@ img.dgobag-play {
 *   Exceptions  *
 ****************/
 
-br.main {
+/*br.main {
   line-height: 300%;
 }
 
@@ -329,4 +524,15 @@ hr.index {
   margin-right: 20px;
   height: 1px;
   background-color: #BEBEBE;
+}*/
+
+/* Affected: CEMP */
+@media screen and (max-width: 551px) {
+  img.cityhall {
+    top: 25px;
+  }
+
+  hr.cityhall {
+    margin-top: 30px;
+  }
 }
