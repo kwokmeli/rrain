@@ -451,7 +451,7 @@ img.dgobag-play {
 .weather {
   font-family: "Helvetica";
   color: black;
-  font-size: 10.5pt;
+  font-size: 12.5pt !important;
   line-height: 175%;
   padding: 0px 30px 0px 30px;
 }
@@ -494,10 +494,6 @@ img.dgobag-play {
   hr.chem {
     margin-top: 28px;
   }
-}
-
-@media screen and (max-width: 383px) {
-
 }
 
 @media screen and (max-width: 382px) {
