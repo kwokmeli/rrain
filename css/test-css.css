@@ -485,7 +485,7 @@ img.dgobag-play {
   }
 }
 
-@media screen and (max-width: 387px) {
+/*@media screen and (max-width: 388px) {
   img.chem {
     top: 23px;
   }
@@ -493,11 +493,23 @@ img.dgobag-play {
   hr.chem {
     margin-top: 28px;
   }
+}*/
+
+@media screen and (max-width: 383px) {
+
 }
 
 @media screen and (max-width: 382px) {
   img.wa {
     margin-top: 10px;
+  }
+
+  img.chem {
+    top: 22px;
+  }
+
+  hr.chem {
+    margin-top: 24px;s
   }
 }
 
