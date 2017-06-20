@@ -254,7 +254,7 @@ img.dgobag-logo {
   float: left;
   margin-left: -110px;
   margin-right: 35px;
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
 /* CSS for Apple store icon on Digital Go Bag page */
@@ -413,7 +413,6 @@ img.dgobag-play {
   font-family: "Helvetica";
   color: black;
   font-size: 10.5pt;
-  line-height: 175%;
   padding: 0px 30px 0px 30px;
 }
 
@@ -437,7 +436,7 @@ img.dgobag-play {
   font-family: "Helvetica";
   color: black;
   font-size: 12pt;
-  max-width: 800px;
+  max-width: 800px !important;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
