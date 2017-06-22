@@ -8,12 +8,15 @@
 
 <html>
 <body>
-<div class="box"><div class="weather">
+
 <!--<p>Click the button to get your coordinates.</p>
 
 <button onclick="getLocation()">Try It</button>-->
 
-<p id="page">Loading weather alerts for your state ...</p>
+<p id="page">
+<span id="events"></span>
+
+</p>
 
 </div></div>
 
@@ -87,13 +90,42 @@ function showPosition(position) {
 
 
 
-var weatherURL = "https://alerts.weather.gov/cap/wa.php?x=1";
-//x.innerHTML = weatherURL;
+var weatherURL = "https://alerts.weather.gov/cap/ny.php?x=1";
+
+
 getText(weatherURL, function(err, data) {
+  var parser;
+  var xmlDoc;
+  var eventNumber;
+  var x;
+  var locations;
+
+  x = document.getElementById("events");
   if (err != null) {
     console.log('Error: ' + err);
   } else {
     console.log(data)
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(data, "text/xml");
+
+    eventNumber = xmlDoc.getElementsByTagName("id").length;
+
+    if (eventNumber == 1) {
+      x.innerHTML += "<div class=\"box\"><div class=\"weather\">There are no current weather advisories.</div</div>"
+    } else {
+      for (i = 1; i < eventNumber; i++) {
+        locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
+        locations = locations.replace(/; /g, "<br>");
+        x.innerHTML += "<div class=\"box\"><div class=\"weather\">"
+          + "<b>" + locations + "</b>" + "<br><br><a href=\""
+          + xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue + "\">"
+          + xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "</a><br><b>Published</b>: "
+          + xmlDoc.getElementsByTagName("published")[i-1].childNodes[0].nodeValue + " | <b>Updated</b>: "
+          + xmlDoc.getElementsByTagName("updated")[i-1].childNodes[0].nodeValue + "<br><br>"
+          + xmlDoc.getElementsByTagName("summary")[i-1].childNodes[0].nodeValue;
+        x.innerHTML += "</div></div>";
+      }
+    }
   }
 });
 
