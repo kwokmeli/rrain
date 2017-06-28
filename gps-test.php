@@ -1,10 +1,5 @@
 <?php /*Template Name: GPS Tester*/ ?>
 <?php get_header(); ?>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-
-
 
 <html>
 <body>
@@ -13,14 +8,14 @@
 <span id="events"><div class="weather"><center>Loading weather advisories ...</center></div></span>
 <!-- </p> -->
 
-</div></div>
-
 <script>
+// Retrieve user's GPS coordinates
 getLocation();
 var weatherURL;
 var x = document.getElementById("events");
 var state;
 
+// Function to retrieve Google's geocode JSON
 var getJSON = function(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
@@ -36,6 +31,7 @@ var getJSON = function(url, callback) {
   xhr.send();
 };
 
+// Function to retrieve weather advisory XML
 var getText = function(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
@@ -76,6 +72,7 @@ function showPosition(position) {
     } else {
       var country = data.results[0].address_components[6].short_name;
 
+      // Check country location of user
       if (country === 'US') {
         state = data.results[0].address_components[5].short_name;
         weatherURL = "https://alerts.weather.gov/cap/".concat(state.toLowerCase()).concat(".php?x=1");
@@ -89,14 +86,17 @@ function showPosition(position) {
           if (err != null) {
             console.log('Error: ' + err);
           } else {
+            // Parse the weather advisory XML
             parser = new DOMParser();
             xmlDoc = parser.parseFromString(data, "text/xml");
 
+            // Find the total number of weather advisories + 1 (the header counts as an XML event)
             eventNumber = xmlDoc.getElementsByTagName("id").length;
 
             if (eventNumber == 1) {
               x.innerHTML = "<div class=\"box\"><div class=\"weather\">There are no current weather advisories.</div</div>"
             } else {
+              // For each weather advisory, gather and print all information
               for (i = 1; i < eventNumber; i++) {
                 locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
                 locations = locations.replace(/; /g, "<br>");
