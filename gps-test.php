@@ -1,14 +1,40 @@
 <?php /*Template Name: GPS Tester*/ ?>
 <?php get_header(); ?>
 
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
 <html>
 <body>
 
 <!-- <p id="page"> -->
-<span id="events"><div class="weather"><center>Loading weather advisories ...</center></div></span>
+<span id="events"><div class="weather"><center>Loading weather advisories <span id="el1">.</span><span id="el2">.</span><span id="el3">.</span></center></div></span>
 <!-- </p> -->
 
 <script>
+$(document).ready(function() {
+
+    var el1 = $("#el1");
+    var el2 = $("#el2");
+    var el3 = $("#el3");
+
+    setInterval(function() {
+      if (el1.css("visibility") == "visible" && el2.css("visibility") == "visible" && el3.css("visibility") == "visible") {
+          el1.css("visibility", "hidden");
+          el2.css("visibility", "hidden");
+          el3.css("visibility", "hidden");
+      } else if (el1.css("visibility") == "hidden" && el2.css("visibility") == "hidden" && el3.css("visibility") == "hidden") {
+        el1.css("visibility", "visible");
+      } else if (el2.css("visibility") == "hidden" && el3.css("visibility") == "hidden") {
+        el2.css("visibility", "visible");
+      } else {
+        el3.css("visibility", "visible");
+      }
+    }, 500);
+
+});
+
 // Retrieve user's GPS coordinates
 getLocation();
 var weatherURL;
@@ -65,13 +91,14 @@ function showPosition(position) {
   // Maximum of 2,500 hits/day, 5 hits/second.
   var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(lat).concat(",").concat(lng).concat("&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0");
 
-  // Perform AJAX call to retreive Geocode JSON.
+  // Perform AJAX call to retrieve Geocode JSON.
   getJSON(url, function locationInfo (err, data) {
     if (err != null) {
       console.log('Error: ' + err);
+      x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving geolocation data. Please try again. </div></div>";
     } else {
       var country = data.results[0].address_components[6].short_name;
-
+      console.log(data);
       // Check country location of user
       if (country === 'US') {
         state = data.results[0].address_components[5].short_name;
@@ -85,6 +112,7 @@ function showPosition(position) {
 
           if (err != null) {
             console.log('Error: ' + err);
+            x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again. </div></div>";
           } else {
             // Parse the weather advisory XML
             parser = new DOMParser();
