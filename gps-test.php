@@ -8,10 +8,81 @@
 <html>
 <body>
 
-<span id="events"><div class="weather"><center>Loading weather advisories <span id="el1">.</span><span id="el2">.</span><span id="el3">.</span></center></div></span>
+<div class="weather">
+
+  <center>
+    <br>Select a method below to get weather advisories for your location: <br><br>
+    <button id="detect">DETECT</button>
+    <div class="dropdown">
+    <button id="search">SEARCH BY STATE</button>
+      <div id="states" class="content">
+        <a href="">Alabama</a>
+        <a href="">Alaska</a>
+        <a href="">Arizona</a>
+        <a href="">Arkansas</a>
+        <a href="">California</a>
+        <a href="">Colorado</a>
+        <a href="">Connecticut</a>
+        <a href="">Delaware</a>
+        <a href="">Florida</a>
+        <a href="">Georgia</a>
+        <a href="">Hawaii</a>
+        <a href="">Idaho</a>
+        <a href="">Illinois</a>
+        <a href="">Indiana</a>
+        <a href="">Iowa</a>
+        <a href="">Kansas</a>
+        <a href="">Kentucky</a>
+        <a href="">Louisiana</a>
+        <a href="">Maine</a>
+        <a href="">Maryland</a>
+        <a href="">Massachusetts</a>
+        <a href="">Michigan</a>
+        <a href="">Minnesota</a>
+        <a href="">Mississippi</a>
+        <a href="">Missouri</a>
+        <a href="">Montana</a>
+        <a href="">Nebraska</a>
+        <a href="">Nevada</a>
+        <a href="">New Hampshire</a>
+        <a href="">New Jersey</a>
+        <a href="">New Mexico</a>
+        <a href="">New York</a>
+        <a href="">North Carolina</a>
+        <a href="">North Dakota</a>
+        <a href="">Ohio</a>
+        <a href="">Oklahoma</a>
+        <a href="">Oregon</a>
+        <a href="">Pennsylvania</a>
+        <a href="">Rhode Island</a>
+        <a href="">South Carolina</a>
+        <a href="">South Dakota</a>
+        <a href="">Tennessee</a>
+        <a href="">Texas</a>
+        <a href="">Utah</a>
+        <a href="">Vermont</a>
+        <a href="">Virginia</a>
+        <a href="">Washington</a>
+        <a href="">West Virginia</a>
+        <a href="">Wisconsin</a>
+        <a href="">Wyoming</a>
+      </div>
+    </div>
+    <br><br>
+    <span id="events">
+    </span>
+
+  </center>
+</div>
 
 <script>
 $(document).ready(function() {
+  // Automatically detect location and provide corresponding weather advisories
+  $("#detect").click(function() {
+    // Clear any previous advisories and/or the dropdown menu
+    $("#events").text("");
+    $("#states").css("visibility", "hidden");
+    $("#events").append("Loading weather advisories <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span>");
     var el1 = $("#el1");
     var el2 = $("#el2");
     var el3 = $("#el3");
@@ -30,10 +101,26 @@ $(document).ready(function() {
         el3.css("visibility", "visible");
       }
     }, 500);
+    // Retrieve user's GPS coordinates
+    getLocation();
+  });
+
+  // Manually select location to see current weather advisories
+  $("#search").click(function() {
+    $("#events").text("");
+    if ($("#states").css("visibility") == "visible") {
+      $("#states").css("visibility", "hidden");
+    } else {
+      $("#states").css("visibility", "visible");
+    }
+  });
+
+
+
 });
 
 // Retrieve user's GPS coordinates
-getLocation();
+//getLocation();
 var x = document.getElementById("events");
 
 // Function to retrieve Google's geocode JSON

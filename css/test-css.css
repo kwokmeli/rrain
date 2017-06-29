@@ -12,7 +12,11 @@ button {
 	background-color: #00823e;
 	color: white !important;
 	font-family:  'Helvetica' !important;
-	border: none !important;
+	/*border: none !important;*/
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   height: 40px;
   width: 175px;
   font-weight: 600 !important;
@@ -459,6 +463,36 @@ img.dgobag-play {
   text-decoration: none;
   color: #2665bd;
   line-height: 175%;
+}
+
+/*CSS for dropdown menu for weather advisory search*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.content {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+  visibility: hidden;
+  min-width: inherit;
+  height: 250px;
+  width: 175px;
+}
+
+.content a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: 'Helvetica' !important;
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #00823e;
+  border-width: 2px;
+  border-bottom: 2px solid white;
 }
 
 /****************
