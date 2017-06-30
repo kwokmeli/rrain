@@ -12,14 +12,10 @@ button {
 	background-color: #00823e;
 	color: white !important;
 	font-family:  'Helvetica' !important;
-	/*border: none !important;*/
-  border-bottom: 2px solid white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
   height: 40px;
   width: 175px;
-  font-weight: 600 !important;
+  font-weight: 600;
 }
 
 button a {
@@ -30,6 +26,26 @@ button a {
 button:hover {
 	background-color:#C20D2D;
   cursor: pointer;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button.stateButtons {
+  height: 26px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: 'Helvetica' !important;
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #00823e;
+  border-width: 2px;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
 }
 
 h1 {
@@ -472,6 +488,7 @@ img.dgobag-play {
 }
 
 .content {
+  margin-top: 2px;
   position: absolute;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -483,6 +500,7 @@ img.dgobag-play {
 }
 
 .content a {
+  height: 26px;
   display: block;
   text-decoration: none;
   color: white;
@@ -493,6 +511,8 @@ img.dgobag-play {
   background-color: #00823e;
   border-width: 2px;
   border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
 }
 
 /****************

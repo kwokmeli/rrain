@@ -16,63 +16,64 @@
     <div class="dropdown">
     <button id="search">SEARCH BY STATE</button>
       <div id="states" class="content">
-        <a href="">Alabama</a>
-        <a href="">Alaska</a>
-        <a href="">Arizona</a>
-        <a href="">Arkansas</a>
-        <a href="">California</a>
-        <a href="">Colorado</a>
-        <a href="">Connecticut</a>
-        <a href="">Delaware</a>
-        <a href="">Florida</a>
-        <a href="">Georgia</a>
-        <a href="">Hawaii</a>
-        <a href="">Idaho</a>
-        <a href="">Illinois</a>
-        <a href="">Indiana</a>
-        <a href="">Iowa</a>
-        <a href="">Kansas</a>
-        <a href="">Kentucky</a>
-        <a href="">Louisiana</a>
-        <a href="">Maine</a>
-        <a href="">Maryland</a>
-        <a href="">Massachusetts</a>
-        <a href="">Michigan</a>
-        <a href="">Minnesota</a>
-        <a href="">Mississippi</a>
-        <a href="">Missouri</a>
-        <a href="">Montana</a>
-        <a href="">Nebraska</a>
-        <a href="">Nevada</a>
-        <a href="">New Hampshire</a>
-        <a href="">New Jersey</a>
-        <a href="">New Mexico</a>
-        <a href="">New York</a>
-        <a href="">North Carolina</a>
-        <a href="">North Dakota</a>
-        <a href="">Ohio</a>
-        <a href="">Oklahoma</a>
-        <a href="">Oregon</a>
-        <a href="">Pennsylvania</a>
-        <a href="">Rhode Island</a>
-        <a href="">South Carolina</a>
-        <a href="">South Dakota</a>
-        <a href="">Tennessee</a>
-        <a href="">Texas</a>
-        <a href="">Utah</a>
-        <a href="">Vermont</a>
-        <a href="">Virginia</a>
-        <a href="">Washington</a>
-        <a href="">West Virginia</a>
-        <a href="">Wisconsin</a>
-        <a href="">Wyoming</a>
+        <a class="stateLinks" id="al">Alabama</a>
+        <a class="stateLinks" id="ak">Alaska</a>
+        <a class="stateLinks" id="az">Arizona</a>
+        <a class="stateLinks" id="ar">Arkansas</a>
+        <a class="stateLinks" id="ca">California</a>
+        <a class="stateLinks" id="co">Colorado</a>
+        <a class="stateLinks" id="ct">Connecticut</a>
+        <a class="stateLinks" id="de">Delaware</a>
+        <a class="stateLinks" id="fl">Florida</a>
+        <a class="stateLinks" id="ga">Georgia</a>
+        <a class="stateLinks" id="hi">Hawaii</a>
+        <a class="stateLinks" id="id">Idaho</a>
+        <a class="stateLinks" id="il">Illinois</a>
+        <a class="stateLinks" id="in">Indiana</a>
+        <a class="stateLinks" id="ia">Iowa</a>
+        <a class="stateLinks" id="ks">Kansas</a>
+        <a class="stateLinks" id="ky">Kentucky</a>
+        <a class="stateLinks" id="la">Louisiana</a>
+        <a class="stateLinks" id="me">Maine</a>
+        <a class="stateLinks" id="md">Maryland</a>
+        <a class="stateLinks" id="ma">Massachusetts</a>
+        <a class="stateLinks" id="mi">Michigan</a>
+        <a class="stateLinks" id="mn">Minnesota</a>
+        <a class="stateLinks" id="ms">Mississippi</a>
+        <a class="stateLinks" id="mo">Missouri</a>
+        <a class="stateLinks" id="mt">Montana</a>
+        <a class="stateLinks" id="ne">Nebraska</a>
+        <a class="stateLinks" id="nv">Nevada</a>
+        <a class="stateLinks" id="nh">New Hampshire</a>
+        <a class="stateLinks" id="nj">New Jersey</a>
+        <a class="stateLinks" id="nm">New Mexico</a>
+        <a class="stateLinks" id="ny">New York</a>
+        <a class="stateLinks" id="nc">North Carolina</a>
+        <a class="stateLinks" id="nd">North Dakota</a>
+        <a class="stateLinks" id="oh">Ohio</a>
+        <a class="stateLinks" id="ok">Oklahoma</a>
+        <a class="stateLinks" id="or">Oregon</a>
+        <a class="stateLinks" id="pa">Pennsylvania</a>
+        <a class="stateLinks" id="ri">Rhode Island</a>
+        <a class="stateLinks" id="sc">South Carolina</a>
+        <a class="stateLinks" id="sd">South Dakota</a>
+        <a class="stateLinks" id="tn">Tennessee</a>
+        <a class="stateLinks" id="tx">Texas</a>
+        <a class="stateLinks" id="ut">Utah</a>
+        <a class="stateLinks" id="vt">Vermont</a>
+        <a class="stateLinks" id="va">Virginia</a>
+        <a class="stateLinks" id="wa">Washington</a>
+        <a class="stateLinks" id="wv">West Virginia</a>
+        <a class="stateLinks" id="wi">Wisconsin</a>
+        <a class="stateLinks" id="wy">Wyoming</a>
       </div>
     </div>
     <br><br>
-    <span id="events">
-    </span>
-
   </center>
+  <span id="events">
+  </span>
+
+  <!-- </center> -->
 </div>
 
 <script>
@@ -106,7 +107,8 @@ $(document).ready(function() {
   });
 
   // Manually select location to see current weather advisories
-  $("#search").click(function() {
+  $("#search").click(function(event) {
+    event.stopPropagation();
     $("#events").text("");
     if ($("#states").css("visibility") == "visible") {
       $("#states").css("visibility", "hidden");
@@ -115,12 +117,62 @@ $(document).ready(function() {
     }
   });
 
+  $(document).click(function() {
+    if ($("#states").css("visibility") == "visible") {
+      $("#states").css("visibility", "hidden");
+    }
+  });
+
+  $("a.stateLinks").click(function(event) {
+    var state;
+    var statename;
+    var weatherURL;
+
+    state = $(this).attr("id");
+    statename = $(event.target).text();
+    $("#states").css("visibility", "hidden");
+    weatherURL = "https://alerts.weather.gov/cap/".concat(state).concat(".php?x=1");
+    getText(weatherURL, function(err, data) {
+      var parser;
+      var xmlDoc;
+      var eventNumber;
+      var locations;
+
+      if (err != null) {
+        console.log('Error: ' + err);
+        x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again. </div></div>";
+      } else {
+        // Parse the weather advisory XML
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(data, "text/xml");
+        // Find the total number of weather advisories + 1 (the header counts as an XML event)
+        eventNumber = xmlDoc.getElementsByTagName("id").length;
+
+        if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
+          x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for the state of " + statename + ".</center>";
+        } else {
+          // For each weather advisory, gather and print all information
+          x.innerHTML = "";
+          for (i = 1; i < eventNumber; i++) {
+            locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
+            locations = locations.replace(/; /g, "<br>");
+            x.innerHTML += "<div class=\"box\"><div class=\"weather\">"
+              + "<b>" + locations + "</b>" + "<br><br><a href=\""
+              + xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue + "\">"
+              + xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "</a><br><b>Published</b>: "
+              + xmlDoc.getElementsByTagName("published")[i-1].childNodes[0].nodeValue + " | <b>Updated</b>: "
+              + xmlDoc.getElementsByTagName("updated")[i-1].childNodes[0].nodeValue + "<br><br>"
+              + xmlDoc.getElementsByTagName("summary")[i-1].childNodes[0].nodeValue;
+            x.innerHTML += "</div></div>";
+          }
+        }
+      }
+    });
+  })
 
 
 });
 
-// Retrieve user's GPS coordinates
-//getLocation();
 var x = document.getElementById("events");
 
 // Function to retrieve Google's geocode JSON
