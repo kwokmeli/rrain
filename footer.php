@@ -10,7 +10,7 @@
   RRAIN Washington is a joint project between the UW Health Sciences Library and the WA Department of Health
   with funding support from the NLM Contract No. HHS-N-276-2014-00658-P<br>
 </div>
-
+  <br><br><br><br>
   <div class="header-spacing"></div>
 </footer>
 

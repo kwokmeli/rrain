@@ -1,0 +1,700 @@
+html, body {
+  margin: 0 auto;
+  padding: 0 !important;
+  position: relative;
+  background-color: white;
+  font-size: 16pt;
+  width: 100% !important;
+  display: inline-block;
+}
+
+button {
+	background-color: #00823e;
+	color: white !important;
+	font-family:  'Helvetica' !important;
+  border: none;
+  height: 40px;
+  width: 175px;
+  font-weight: 600;
+}
+
+button a {
+	color: white;
+  font-weight: bold !important;
+}
+
+button:hover {
+	background-color:#C20D2D;
+  cursor: pointer;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button.stateButtons {
+  height: 26px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: 'Helvetica' !important;
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #00823e;
+  border-width: 2px;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
+}
+
+h1 {
+  color: #535559;
+  font-family: "Helvetica";
+  font-size: 28pt;
+  font-weight: 600 !important;
+  text-align: center;
+}
+
+/* CSS for individual dividers on index page */
+hr.cloud {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.traffic {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.map {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.fire {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.command {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.flood {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.earthquakes {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.diseases {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.chem {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.bag {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.wa {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+hr.cityhall {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* CSS for dividers on non-index page */
+hr.side {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: -25px;
+  margin-left: -5px;
+}
+
+/* CSS for dividers on Digital Go Bag page */
+hr.dgobag {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: -25px;
+  margin-left: -155px;
+}
+
+/* CSS for positioning individual images on index page */
+img.cloud {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.traffic {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.map {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.fire {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.command {
+  position: relative;
+  display: inline-block;
+  top: 13px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.flood {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.earthquakes {
+  position: relative;
+  display: inline-block;
+  top: 15px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.diseases {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.chem {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.bag {
+  position: relative;
+  display: inline-block;
+  top: 7px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.wa {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+img.cityhall {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}
+
+/* CSS for mobile app icon on Digital Go Bag page */
+img.dgobag-logo {
+  position: relative;
+  float: left;
+  margin-left: -110px;
+  margin-right: 35px;
+  margin-top: 25px;
+}
+
+/* CSS for Apple store icon on Digital Go Bag page */
+img.dgobag-apple {
+  border: 3px solid #ffffff;
+  margin-left: -2px;
+}
+
+/* CSS for Google Play store icon on Digital Go Bag page */
+img.dgobag-play {
+}
+
+/****************
+*    Header     *
+****************/
+
+/* CSS for RRAIN logo on header */
+#index-header-logo {
+  float: right;
+  width: 45px;
+  height: auto !important;
+  margin-right: 15px !important;
+  margin-top: -40px;
+}
+
+/* CSS for RRAIN logo on header for non-index page */
+#header-logo {
+  float: right;
+  width: 45px;
+  height: auto !important;
+  margin-right: 15px !important;
+  margin-top: -50px;
+}
+
+/* CSS for green bar on header */
+.blog-title {
+  background-color: #00823e;
+	color: white !important;
+  font-size: 16pt !important;
+  font-weight: bold !important;
+	font-family:  'Helvetica' !important;
+	border: none !important;
+	padding: 13px 50px 13px 13px !important;
+}
+
+/* CSS for main title on header */
+.blog-title a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CSS for sub-title on header */
+.header-selection {
+  color: white;
+  font-family: 'Helvetica';
+  font-size: 13pt !important;
+  font-weight: normal !important;
+  border: none !important;
+  padding-right: 25px;
+}
+
+/****************
+*    Footer     *
+****************/
+
+.blog-footer {
+  padding-left: 20px !important;
+  padding-right: 15px !important;
+  font-family: sans-serif;
+  font-size: 8pt;
+  text-align: center;
+}
+
+.blog-footer a {
+  text-decoration: none;
+}
+
+.blog-footer p:last-child {
+  margin-bottom: 0px;
+}
+
+.footer-text {
+  max-width: 500px !important;
+  text-align: center !important;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: inline-block;
+  /*position: relative;*/
+}
+
+#foot-img {
+  width: auto;
+  height: auto;
+  max-height: 50px;
+  margin-right: 15pt;
+}
+
+/****************
+*    Content    *
+****************/
+
+/* CSS for index page menu titles */
+.blog-post-title {
+
+}
+
+.blog-post-title a {
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: 'Helvetica' !important;
+  color: #1E2D5F;
+  text-decoration: none;
+  position: absolute;
+  margin-top: 25px;
+  margin-right: 40px;
+}
+
+/* CSS for non-index page sub-titles */
+.sub-title {
+  margin-top: -6px;
+  font-family: 'Helvetica' !important;
+  font-size: 11pt;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 50px;
+}
+
+.sub-title a {
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: 'Helvetica' !important;
+  color: #1E2D5F;
+  text-decoration: none;
+  margin-top: 24px;
+}
+
+/* CSS for Digital Go Bag page */
+.dgobag {
+  font-family: 'Helvetica' !important;
+  font-size: 11pt;
+  position: relative;
+  margin-left: 180px;
+  margin-right: 50px;
+}
+
+.dgobag a {
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: 'Helvetica' !important;
+  color: #1E2D5F;
+  text-decoration: none;
+}
+
+/* CSS for CEMP page */
+.cemp {
+  font-family: "Helvetica";
+  color: black;
+  font-size: 10.5pt;
+  padding: 0px 30px 0px 30px;
+}
+
+.cemp a {
+  text-decoration: none;
+  color: #2665bd;
+  line-height: 175%;
+}
+
+/* CSS for a green box with shadow */
+.box {
+  font-size: .8em;
+  border: 3px solid green;
+  margin: 25px;
+  padding: 0px 10px 15px 10px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+/* CSS for About page */
+.about {
+  font-family: "Helvetica";
+  color: black;
+  font-size: 12pt;
+  max-width: 800px !important;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.about a {
+  text-decoration: none;
+  color: #2665bd;
+}
+
+.weather {
+  font-family: "Helvetica";
+  color: black;
+  font-size: 12.5pt !important;
+  line-height: 175%;
+  padding: 10px 30px 10px 30px;
+}
+
+.weather a {
+  text-decoration: none;
+  color: #2665bd;
+  line-height: 175%;
+}
+
+/*CSS for dropdown menu for weather advisory search*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.content {
+  margin-top: 2px;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+  visibility: hidden;
+  min-width: inherit;
+  height: 250px;
+  width: 175px;
+}
+
+.content a {
+  height: 26px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: 'Helvetica' !important;
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #00823e;
+  border-width: 2px;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
+}
+
+/****************
+*   Exceptions  *
+****************/
+
+@media screen and (max-width: 551px) {
+  img.cityhall {
+    top: 25px;
+  }
+
+  hr.cityhall {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  img.cityhall {
+    top: 37px;
+  }
+
+  hr.cityhall {
+    margin-top: 49px;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  img.chem {
+    top: 23px;
+  }
+
+  hr.chem {
+    margin-top: 28px;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  img.wa {
+    margin-top: 10px;
+  }
+
+  img.chem {
+    top: 22px;
+  }
+
+  hr.chem {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  img.diseases {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  img.cityhall {
+    top: 46px;
+  }
+
+  hr.cityhall {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 316px) {
+  img.cloud {
+    top: 24px;
+  }
+
+  hr.cloud {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 305px) {
+  img.command {
+    top: 24px;
+  }
+
+  hr.command {
+    margin-top: 28px;
+  }
+}
+
+@media screen and (max-width: 302px) {
+  img.cloud {
+    top: 24px;
+  }
+
+  hr.cloud {
+    margin-top: 25px;
+  }
+
+  img.command {
+    top: 26px;
+  }
+
+  hr.command {
+    margin-top: 28px;
+  }
+
+  img.wa {
+    top: 20px;
+  }
+
+  hr.wa {
+    margin-top: 33px;
+  }
+}
+
+@media screen and (max-width: 291px) {
+  img.traffic {
+    top: 21px;
+  }
+
+  hr.traffic {
+    margin-top: 22px;
+  }
+
+  img.map {
+    top: 19px;
+  }
+
+  hr.map {
+    margin-top: 22px;
+  }
+}
+
+@media screen and (max-width: 287px) {
+  img.fire {
+    top: 23px;
+  }
+
+  hr.fire {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 286px) {
+  img.flood {
+    top: 22px;
+  }
+
+  hr.flood {
+    margin-top: 26px;
+  }
+
+  img.chem {
+    top: 36px;
+  }
+
+  hr.chem {
+    margin-top: 47px;
+  }
+
+  img.bag {
+    top: 15px;
+  }
+
+  hr.bag {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 279px) {
+  img.cityhall {
+    top: 56px;
+  }
+
+  hr.cityhall {
+    margin-top: 97px;
+  }
+}
+
+@media screen and (max-width: 268px) {
+  img.cloud {
+    top: 37px;
+  }
+
+  hr.cloud {
+    margin-top: 44px;
+  }
+}

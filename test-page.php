@@ -1,3 +1,5 @@
+<?php /*Template Name: Primary Template*/ ?>
+
 <?php get_header(); ?>
 
 <?php if ( is_front_page() ) { ?> <!-- CSS for index page -->

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <?php if (is_home()) {
+    <?php if (is_front_page()) {
       ?> <title> <?php echo get_bloginfo('name'); ?> </title>
       <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a></div>
       <a href="<?php echo get_option('about')?>"><img id="index-header-logo" src="<?php bloginfo('template_directory'); ?>/img/icon-outline.png"/></a><?php
