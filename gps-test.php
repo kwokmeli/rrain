@@ -80,33 +80,13 @@
 $(document).ready(function() {
   // Automatically detect location and provide corresponding weather advisories
   $("#detect").click(function() {
-    // Clear any previous advisories and/or the dropdown menu
     $("#events").text("");
     $("#states").css("visibility", "hidden");
-    $("#events").append("Loading weather advisories <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span>");
-    var el1 = $("#el1");
-    var el2 = $("#el2");
-    var el3 = $("#el3");
-
-    // Set blinking animation for loading symbol
-    setInterval(function() {
-      if (el1.css("visibility") == "visible" && el2.css("visibility") == "visible" && el3.css("visibility") == "visible") {
-          el1.css("visibility", "hidden");
-          el2.css("visibility", "hidden");
-          el3.css("visibility", "hidden");
-      } else if (el1.css("visibility") == "hidden" && el2.css("visibility") == "hidden" && el3.css("visibility") == "hidden") {
-        el1.css("visibility", "visible");
-      } else if (el2.css("visibility") == "hidden" && el3.css("visibility") == "hidden") {
-        el2.css("visibility", "visible");
-      } else {
-        el3.css("visibility", "visible");
-      }
-    }, 500);
-    // Retrieve user's GPS coordinates
+    loading();
     getLocation();
   });
 
-  // Manually select location to see current weather advisories
+  // Trigger dropdown menu to manually select state
   $("#search").click(function(event) {
     event.stopPropagation();
     $("#events").text("");
@@ -117,17 +97,20 @@ $(document).ready(function() {
     }
   });
 
+  // Hide dropdown menu if user clicks away
   $(document).click(function() {
     if ($("#states").css("visibility") == "visible") {
       $("#states").css("visibility", "hidden");
     }
   });
 
+  // Retrieve weather advisories for manually selected state
   $("a.stateLinks").click(function(event) {
     var state;
     var statename;
     var weatherURL;
 
+    loading();
     state = $(this).attr("id");
     statename = $(event.target).text();
     $("#states").css("visibility", "hidden");
@@ -169,8 +152,6 @@ $(document).ready(function() {
       }
     });
   })
-
-
 });
 
 var x = document.getElementById("events");
@@ -207,6 +188,28 @@ var getText = function(url, callback) {
   xhr.send();
 };
 
+// Set blinking animation for loading symbol
+function loading() {
+  $("#events").append("<center>Loading weather advisories <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
+  var el1 = $("#el1");
+  var el2 = $("#el2");
+  var el3 = $("#el3");
+
+  setInterval(function() {
+    if (el1.css("visibility") == "visible" && el2.css("visibility") == "visible" && el3.css("visibility") == "visible") {
+        el1.css("visibility", "hidden");
+        el2.css("visibility", "hidden");
+        el3.css("visibility", "hidden");
+    } else if (el1.css("visibility") == "hidden" && el2.css("visibility") == "hidden" && el3.css("visibility") == "hidden") {
+      el1.css("visibility", "visible");
+    } else if (el2.css("visibility") == "hidden" && el3.css("visibility") == "hidden") {
+      el2.css("visibility", "visible");
+    } else {
+      el3.css("visibility", "visible");
+    }
+  }, 500);
+}
+
 function getLocation() {
   // If the browser supports HTML5's Geolocation feature, get GPS coordinates.
   if ("geolocation" in navigator) {
@@ -236,7 +239,6 @@ function showPosition(position) {
       x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving geolocation data. Please try again. </div></div>";
     } else {
       var country = data.results[0].address_components[6].short_name;
-console.log(data);
       // Check country location of user
       if (country === 'US') {
         state = data.results[0].address_components[5].short_name;
@@ -255,7 +257,6 @@ console.log(data);
             // Parse the weather advisory XML
             parser = new DOMParser();
             xmlDoc = parser.parseFromString(data, "text/xml");
-console.log(xmlDoc);
             // Find the total number of weather advisories + 1 (the header counts as an XML event)
             eventNumber = xmlDoc.getElementsByTagName("id").length;
 
