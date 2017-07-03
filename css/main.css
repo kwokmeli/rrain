@@ -32,22 +32,6 @@ a:hover {
   cursor: pointer;
 }
 
-button.stateButtons {
-  height: 26px;
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-family: 'Helvetica' !important;
-  font-size: 10pt;
-  text-transform: uppercase;
-  font-weight: 600;
-  background-color: #00823e;
-  border-width: 2px;
-  border-bottom: 2px solid white;
-  border-top: none;
-  border-right: none;
-}
-
 h1 {
   color: #535559;
   font-family: "Helvetica";
@@ -494,7 +478,6 @@ img.dgobag-play {
   overflow-x: hidden;
   z-index: 1;
   visibility: hidden;
-  min-width: inherit;
   height: 250px;
   width: 175px;
 }
@@ -508,11 +491,15 @@ img.dgobag-play {
   font-size: 10pt;
   text-transform: uppercase;
   font-weight: 600;
-  background-color: #00823e;
+  background-color: #77af92;
   border-width: 2px;
   border-bottom: 2px solid white;
   border-top: none;
   border-right: none;
+}
+
+.content a:hover {
+  background-color: #239b5d;
 }
 
 /****************
@@ -526,6 +513,21 @@ img.dgobag-play {
 
   hr.cityhall {
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  button {
+    height: 40px;
+    width: 125px;
+  }
+
+  .content {
+    width: 125px;
+  }
+
+  .content a {
+    font-size: 8pt;
   }
 }
 

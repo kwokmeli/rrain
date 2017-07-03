@@ -73,7 +73,6 @@
   <span id="events">
   </span>
 
-  <!-- </center> -->
 </div>
 
 <script>
@@ -89,7 +88,7 @@ $(document).ready(function() {
   // Trigger dropdown menu to manually select state
   $("#search").click(function(event) {
     event.stopPropagation();
-    $("#events").text("");
+    // $("#events").text("");
     if ($("#states").css("visibility") == "visible") {
       $("#states").css("visibility", "hidden");
     } else {
@@ -230,20 +229,26 @@ function showPosition(position) {
 
   // Perform AJAX call to retrieve Geocode JSON.
   getJSON(url, function locationInfo (err, data) {
+    var country;
     var state;
     var statename;
     var weatherURL;
+
+    if ( typeof data == 'string' ) {
+      data = JSON.parse(data);
+    }
 
     if (err != null) {
       console.log('Error: ' + err);
       x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving geolocation data. Please try again. </div></div>";
     } else {
-      var country = data.results[0].address_components[6].short_name;
+      country = data.results[0].address_components[6].short_name;
       // Check country location of user
       if (country === 'US') {
         state = data.results[0].address_components[5].short_name;
         statename = data.results[0].address_components[5].long_name;
         weatherURL = "https://alerts.weather.gov/cap/".concat(state.toLowerCase()).concat(".php?x=1");
+
         getText(weatherURL, function(err, data) {
           var parser;
           var xmlDoc;
@@ -281,7 +286,7 @@ function showPosition(position) {
           }
         });
       } else {
-        x.innerHTML = "<div class=\"box\"><div class=\"weather\">You are not located in the U.S. Unable to retrieve weather advisories.</div></div>";
+        x.innerHTML = "<div class=\"box\"><div class=\"weather\">You are not located in the United States. Unable to retrieve weather advisories.</div></div>";
       }
     }
   });
