@@ -5,24 +5,24 @@
           <?php echo get_post_field('post_content', $post->ID); ?>
         </div>
         <?php get_footer(); ?>
-<?php } else if ( is_page(92) || is_page(102) ) { ?> <!-- CSS for Digital Go Bag page -->
+<?php } else if ( is_page(DIGITAL_GO_BAG_PAGE_ID) ) { ?> <!-- CSS for Digital Go Bag page -->
         <div class="dgobag">
           <?php echo get_post_field('post_content', $post->ID); ?>
         </div>
         <?php wp_footer(); ?>
-<?php } else if ( is_page(234) || is_page(167) || is_page(16) || is_page(36) || is_page(158) || is_page(176) || is_page(133) ) { ?> <!-- CSS for CEMP, Events, Key Personnel, and Focus Group pages -->
+<?php } else if (  is_page(CEMP_PAGE_ID) || is_page(EVENTS_PAGE_ID) || is_page(KEY_PERSONNEL_PAGE_ID) || is_page(FOCUS_GROUP_PAGE_ID) ) { ?> <!-- CSS for CEMP, Events, Key Personnel, and Focus Group pages -->
         <div class="box">
           <div class="cemp">
             <?php echo get_post_field('post_content', $post->ID); ?>
           </div>
         </div>
         <?php wp_footer(); ?>
-<?php } else if ( is_page(59) || is_page(147) ) { ?> <!-- CSS for About page -->
+<?php } else if ( is_page(ABOUT_PAGE_ID) ) { ?> <!-- CSS for About page -->
         <div class="about">
           <?php echo get_post_field('post_content', $post->ID); ?>
         </div>
         <?php get_footer(); ?>
-<?php } else if ( is_page(47) || is_page(161) ) { ?> <!-- CSS for Weather page -->
+<?php } else if ( is_page(WEATHER_PAGE_ID) ) { ?> <!-- CSS for Weather page -->
         <?php
         date_default_timezone_set('America/Los_Angeles');
         ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)');
