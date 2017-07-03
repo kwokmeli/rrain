@@ -109,6 +109,7 @@ $(document).ready(function() {
     var statename;
     var weatherURL;
 
+    $("#events").text("");
     loading();
     state = $(this).attr("id");
     statename = $(event.target).text();
