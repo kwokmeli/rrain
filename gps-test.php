@@ -227,7 +227,7 @@ function showPosition(position) {
   // Reverse lookup location information using Google's Geocodes.
   // Maximum of 2,500 hits/day, 5 hits/second.
   var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(lat).concat(",").concat(lng).concat("&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0");
-console.log("url: " +  url);
+
   // Perform AJAX call to retrieve Geocode JSON.
   getJSON(url, function locationInfo (err, data) {
     var country;
@@ -235,24 +235,31 @@ console.log("url: " +  url);
     var statename;
     var weatherURL;
 
-    // Safari on iOS: XMLHttpRequest.responseType is always type text
-    if ( typeof data == 'string' ) {
-      data = JSON.parse(data);
-    }
-
     // Error when retrieving geocode data
-    if ( (err != null) || (typeof data != 'string') || (typeof data != 'object') ) {
+    if ( err != null ) {
       console.log( "Error: " + err );
-      console.log( "Data type: " + typeof data );
-      x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving geolocation data. Please try again or select a state using the Search by State method. </div></div>";
+      x.innerHTML = "<div class=\"box\"><div class=\"weather\">An error occured when retrieving geolocation data. Please try again or select a state using the Search by State method. </div></div>";
     } else {
 
+      // Safari on iOS: XMLHttpRequest.responseType is always type text
+      if ( typeof data == 'string' ) {
+        data = JSON.parse(data);
+      }
 console.log(data);
 
       if ( data.status != "OK" ) {
         console.log("Error status: " + data.status);
         x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geocode error " + data.status + " when retrieving geolocation data. Please try again or select a state using the Search by State method. </div></div>";
       } else {
+console.log("formatted address: " + data.results[0].formatted_address);
+var tokens = data.results[0].formatted_address;
+tokens = tokens.split(",");
+var tokenLength = tokens.length;
+console.log("country: " + tokens[tokenLength - 1]);
+var tokenStateArray = tokens[tokenLength - 2];
+var tokenState = tokenStateArray.split(" ")[1];
+console.log("state: " + tokenState);
+
         country = data.results[0].address_components[6].short_name;
         // Check country location of user
         if (country === 'US') {
