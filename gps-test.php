@@ -227,7 +227,7 @@ function showPosition(position) {
   // Reverse lookup location information using Google's Geocodes.
   // Maximum of 2,500 hits/day, 5 hits/second.
   var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(lat).concat(",").concat(lng).concat("&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0");
-
+console.log("url: " +  url);
   // Perform AJAX call to retrieve Geocode JSON.
   getJSON(url, function locationInfo (err, data) {
     var country;
@@ -235,59 +235,70 @@ function showPosition(position) {
     var statename;
     var weatherURL;
 
+    // Safari on iOS: XMLHttpRequest.responseType is always type text
     if ( typeof data == 'string' ) {
       data = JSON.parse(data);
     }
 
-    if (err != null) {
-      console.log('Error: ' + err);
-      x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving geolocation data. Please try again. </div></div>";
+    // Error when retrieving geocode data
+    if ( (err != null) || (typeof data != 'string') || (typeof data != 'object') ) {
+      console.log( "Error: " + err );
+      console.log( "Data type: " + typeof data );
+      x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving geolocation data. Please try again or select a state using the Search by State method. </div></div>";
     } else {
-      country = data.results[0].address_components[6].short_name;
-      // Check country location of user
-      if (country === 'US') {
-        state = data.results[0].address_components[5].short_name;
-        statename = data.results[0].address_components[5].long_name;
-        weatherURL = "https://alerts.weather.gov/cap/".concat(state.toLowerCase()).concat(".php?x=1");
 
-        getText(weatherURL, function(err, data) {
-          var parser;
-          var xmlDoc;
-          var eventNumber;
-          var locations;
+console.log(data);
 
-          if (err != null) {
-            console.log('Error: ' + err);
-            x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again. </div></div>";
-          } else {
-            // Parse the weather advisory XML
-            parser = new DOMParser();
-            xmlDoc = parser.parseFromString(data, "text/xml");
-            // Find the total number of weather advisories + 1 (the header counts as an XML event)
-            eventNumber = xmlDoc.getElementsByTagName("id").length;
+      if ( data.status != "OK" ) {
+        console.log("Error status: " + data.status);
+        x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geocode error " + data.status + " when retrieving geolocation data. Please try again or select a state using the Search by State method. </div></div>";
+      } else {
+        country = data.results[0].address_components[6].short_name;
+        // Check country location of user
+        if (country === 'US') {
+          state = data.results[0].address_components[5].short_name;
+          statename = data.results[0].address_components[5].long_name;
+          weatherURL = "https://alerts.weather.gov/cap/".concat(state.toLowerCase()).concat(".php?x=1");
 
-            if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
-              x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for the state of " + statename + ".</center>";
+          getText(weatherURL, function(err, data) {
+            var parser;
+            var xmlDoc;
+            var eventNumber;
+            var locations;
+
+            if (err != null) {
+              console.log('Error: ' + err);
+              x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again. </div></div>";
             } else {
-              // For each weather advisory, gather and print all information
-              x.innerHTML = "";
-              for (i = 1; i < eventNumber; i++) {
-                locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
-                locations = locations.replace(/; /g, "<br>");
-                x.innerHTML += "<div class=\"box\"><div class=\"weather\">"
-                  + "<b>" + locations + "</b>" + "<br><br><a href=\""
-                  + xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue + "\">"
-                  + xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "</a><br><b>Published</b>: "
-                  + xmlDoc.getElementsByTagName("published")[i-1].childNodes[0].nodeValue + " | <b>Updated</b>: "
-                  + xmlDoc.getElementsByTagName("updated")[i-1].childNodes[0].nodeValue + "<br><br>"
-                  + xmlDoc.getElementsByTagName("summary")[i-1].childNodes[0].nodeValue;
-                x.innerHTML += "</div></div>";
+              // Parse the weather advisory XML
+              parser = new DOMParser();
+              xmlDoc = parser.parseFromString(data, "text/xml");
+              // Find the total number of weather advisories + 1 (the header counts as an XML event)
+              eventNumber = xmlDoc.getElementsByTagName("id").length;
+
+              if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
+                x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for the state of " + statename + ".</center>";
+              } else {
+                // For each weather advisory, gather and print all information
+                x.innerHTML = "";
+                for (i = 1; i < eventNumber; i++) {
+                  locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
+                  locations = locations.replace(/; /g, "<br>");
+                  x.innerHTML += "<div class=\"box\"><div class=\"weather\">"
+                    + "<b>" + locations + "</b>" + "<br><br><a href=\""
+                    + xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue + "\">"
+                    + xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "</a><br><b>Published</b>: "
+                    + xmlDoc.getElementsByTagName("published")[i-1].childNodes[0].nodeValue + " | <b>Updated</b>: "
+                    + xmlDoc.getElementsByTagName("updated")[i-1].childNodes[0].nodeValue + "<br><br>"
+                    + xmlDoc.getElementsByTagName("summary")[i-1].childNodes[0].nodeValue;
+                  x.innerHTML += "</div></div>";
+                }
               }
             }
-          }
-        });
-      } else {
-        x.innerHTML = "<div class=\"box\"><div class=\"weather\">You are not located in the United States. Unable to retrieve weather advisories.</div></div>";
+          });
+        } else {
+          x.innerHTML = "<div class=\"box\"><div class=\"weather\">You are not located in the United States. Unable to retrieve weather advisories.</div></div>";
+        }
       }
     }
   });
