@@ -16,3 +16,7 @@ Replace ABOUT_URL with the URL of your About page.
 
 ### page.php
 Replace DIGITAL_GO_BAG_PAGE_ID, CEMP_PAGE_ID, EVENTS_PAGE_ID, KEY_PERSONNEL_PAGE_ID, FOCUS_GROUP_PAGE_ID, ABOUT_PAGE_ID, and WEATHER_PAGE_ID with their respective Wordpress page IDs. To find the page IDs, navigate to Settings -> Permalinks -> Plain. The Wordpress page ID is the number after "/?page_id=" on a page's URL.
+
+## Finding Weather Advisories via Geolocation
+Using the GPS template (not the default), users will be able to have their location automatically detected via HTML5's Geolocation function. Weather advisories for their Washington State county will be provided. Alternatively, users have the option to view weather advisories by selecting a Washington State county from a list.
+- Safari users should ensure that Wi-Fi is enabled on their device in order to use the Detect option
