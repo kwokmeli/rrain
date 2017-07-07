@@ -111,7 +111,6 @@ $(document).ready(function() {
       var locations;
 
       if (err != null) {
-        console.log('Error: ' + err);
         x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again. </div></div>";
       } else {
         // Parse the weather advisory XML
@@ -121,7 +120,7 @@ $(document).ready(function() {
         eventNumber = xmlDoc.getElementsByTagName("id").length;
 
         if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
-          x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyName + " county.</center>";
+          x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyName + " County.</center>";
         } else {
           // For each weather advisory, gather and print all information
           x.innerHTML = "";
@@ -205,7 +204,7 @@ function getLocation() {
       navigator.geolocation.getCurrentPosition(showPosition);
   // If the browser does not support HTML5's Geolocation feature, display an error.
   } else {
-      x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geolocation is not supported by this browser. Unable to retrieve weather advisories.</div></div>";
+      x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geolocation is not supported by this browser. Unable to retrieve weather advisories. Please select a county using the Search by County method. </div></div>";
   }
 }
 
@@ -216,7 +215,6 @@ function showPosition(position) {
   // Reverse lookup location information using Google's Geocodes.
   // Maximum of 2,500 hits/day, 5 hits/second.
   var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(lat).concat(",").concat(lng).concat("&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0");
-
   // Perform AJAX call to retrieve Geocode JSON.
   getJSON(url, function locationInfo (err, data) {
     var countyAbbr;
@@ -224,8 +222,7 @@ function showPosition(position) {
     var countyName;
     var state;
     var weatherURL;
-
-    countyCode = null;
+    countyCode = "nonUS";
 
     // Error when retrieving geocode data
     if ( err != null ) {
@@ -373,15 +370,17 @@ console.log(data);
                     countyCode = "WAC077";
                     break;
                   default:
-                    countyCode = null;
+                    countyCode = "invalidCounty";
                 }
               }
             }
           }
         }
 
-        if (countyCode == null) {
-          x.innerHTML = "<div class=\"box\"><div class=\"weather\">An error occured while retrieving weather advisories. Please try again or select a county using the Search by County method. </div></div>";
+        if (countyCode == "nonUS") {
+          x.innerHTML = "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for locations outside Washington state. Please select a county using the Search by County method. </div></div>";
+        } else if (countyCode == "invalidCounty") {
+          x.innerHTML = "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for your county. Please try again or select a county using the Search by County method. </div></div>";
         } else {
           weatherURL = "https://alerts.weather.gov/cap/wwaatmget.php?x=".concat(countyCode).concat("&y=1");
 
@@ -392,7 +391,6 @@ console.log(data);
             var locations;
 
             if (err != null) {
-              console.log('Error: ' + err);
               x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again or select a county using the Search by County method. </div></div>";
             } else {
               // Parse the weather advisory XML
@@ -402,7 +400,7 @@ console.log(data);
               eventNumber = xmlDoc.getElementsByTagName("id").length;
 
               if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
-                x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " county.</center>";
+                x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " County.</center>";
               } else {
                 // For each weather advisory, gather and print all information
                 x.innerHTML = "";

@@ -5,6 +5,7 @@ html, body {
   background-color: white;
   font-size: 16pt;
   width: 100% !important;
+  height: 100%;
   display: inline-block;
 }
 
@@ -509,6 +510,13 @@ img.dgobag-play {
 
 .content a:hover {
   background-color: #239b5d;
+}
+
+#map {
+  position: relative;
+  height: 100%;
+  top: -20px !important;
+  margin-bottom: -25px;
 }
 
 /****************
