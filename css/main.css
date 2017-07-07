@@ -16,6 +16,7 @@ button {
   height: 40px;
   width: 175px;
   font-weight: 600;
+  display: inline-block;
 }
 
 button a {
@@ -530,6 +531,11 @@ img.dgobag-play {
     width: 125px;
   }
 
+  button#search {
+    position: relative;
+    top: -7px;
+  }
+
   .content {
     width: 125px;
   }
@@ -559,6 +565,24 @@ img.dgobag-play {
   }
 }
 
+@media screen and (max-width: 384px) {
+  img.dgobag-logo-oem-shelter {
+    margin-left: -120px;
+  }
+
+  img.dgobag-logo {
+    margin-left: -110px;
+  }
+
+  .dgobag {
+    margin-left: 150px;
+  }
+
+  hr.dgobag {
+    margin-left: -120px;
+  }
+}
+
 @media screen and (max-width: 382px) {
   img.wa {
     margin-top: 10px;
@@ -570,6 +594,16 @@ img.dgobag-play {
 
   hr.chem {
     margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 337px) {
+  img.dgobag-logo-oem-shelter {
+    position: absolute;
+  }
+
+  img.dgobag-logo {
+    position: absolute;
   }
 }
 
@@ -596,6 +630,27 @@ img.dgobag-play {
 
   hr.cloud {
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 314px) {
+  button {
+    height: 40px;
+    width: 125px;
+  }
+
+  button#search {
+    position: relative;
+    top: 3px;
+    left: 3px;
+  }
+
+  .content {
+    width: 125px;
+  }
+
+  .content a {
+    font-size: 8pt;
   }
 }
 
@@ -706,5 +761,26 @@ img.dgobag-play {
 
   hr.cloud {
     margin-top: 44px;
+  }
+}
+
+@media screen and (max-width: 189px) {
+  button {
+    height: 40px;
+    width: 125px;
+  }
+
+  button#search {
+    position: relative;
+    top: 3px;
+    left: 0px;
+  }
+
+  .content {
+    width: 125px;
+  }
+
+  .content a {
+    font-size: 8pt;
   }
 }
