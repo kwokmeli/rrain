@@ -250,7 +250,7 @@ console.log(data);
                   }
                   countyAbbr += countyName[k];
                 }
-
+                
                 // Determine the correct weather.gov county code
                 switch (countyAbbr) {
                   case "Adams":
@@ -334,7 +334,7 @@ console.log(data);
                   case "Pierce":
                     countyCode = "WAC053";
                     break;
-                  case "SanJuan":
+                  case "San Juan":
                     countyCode = "WAC055";
                     break;
                   case "Skagit":
