@@ -1,4 +1,4 @@
-<?php /*Template Name: Traffic Tester*/ ?>
+<?php /*Template Name: Traffic Template*/ ?>
 <?php get_header(); ?>
 
 <html>
@@ -7,9 +7,10 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
   </head>
+
   <body>
     <div class="weather">
-      <div id="events"></div>
+      <div id="traffic"></div>
     </div>
     <div id="map"></div>
 
@@ -22,7 +23,7 @@
       });
 
       function loading() {
-        $("#events").append("<center>Loading traffic map, this may take a few minutes <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
+        $("#traffic").append("<center>Loading traffic map, this may take a few minutes <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
         var el1 = $("#el1");
         var el2 = $("#el2");
         var el3 = $("#el3");
@@ -43,29 +44,28 @@
       }
 
       function getLocation() {
-        // If the browser supports HTML5's Geolocation feature, get GPS coordinates.
+        // If the browser supports HTML5's Geolocation feature, get GPS coordinates
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(showPosition);
-        // If the browser does not support HTML5's Geolocation feature, display an error.
+        // If the browser does not support HTML5's Geolocation feature, display an error
         } else {
             x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geolocation is not supported by this browser. Unable to load traffic map. </div></div>";
         }
       }
 
       function showPosition(position) {
-        // Retrieve GPS coordinates using Geolocation.
+        // Retrieve GPS coordinates using Geolocation
         n1 = position.coords.latitude;
         n2 = position.coords.longitude;
 
         var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 13,
+          zoom: 14,
           center: {lat: n1, lng: n2}
         });
 
         var trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);
       }
-
     </script>
 
     <script async defer

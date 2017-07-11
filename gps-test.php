@@ -1,4 +1,4 @@
-<?php /*Template Name: GPS Tester*/ ?>
+<?php /*Template Name: GPS Template*/ ?>
 <?php get_header(); ?>
 
 <head>
@@ -9,7 +9,6 @@
 <body>
 
 <div class="weather">
-
   <center>
     <br>Select a method below to get weather advisories for your location: <br><br>
     <button id="detect">DETECT</button>
@@ -61,7 +60,6 @@
   </center>
   <span id="events">
   </span>
-
 </div>
 
 <script>
@@ -77,7 +75,6 @@ $(document).ready(function() {
   // Trigger dropdown menu to manually select county
   $("#search").click(function(event) {
     event.stopPropagation();
-    // $("#events").text("");
     if ($("#counties").css("visibility") == "visible") {
       $("#counties").css("visibility", "hidden");
     } else {
@@ -199,23 +196,22 @@ function loading() {
 }
 
 function getLocation() {
-  // If the browser supports HTML5's Geolocation feature, get GPS coordinates.
+  // If the browser supports HTML5's Geolocation feature, get GPS coordinates
   if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(showPosition);
-  // If the browser does not support HTML5's Geolocation feature, display an error.
   } else {
       x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geolocation is not supported by this browser. Unable to retrieve weather advisories. Please select a county using the Search by County method. </div></div>";
   }
 }
 
 function showPosition(position) {
-  // Retrieve GPS coordinates using Geolocation.
+  // Retrieve GPS coordinates using Geolocation
   var lat = position.coords.latitude;
   var lng = position.coords.longitude;
-  // Reverse lookup location information using Google's Geocodes.
-  // Maximum of 2,500 hits/day, 5 hits/second.
+  // Reverse lookup location information using Google's Geocodes
+  // Maximum of 2,500 hits/day, 5 hits/second
   var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(lat).concat(",").concat(lng).concat("&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0");
-  // Perform AJAX call to retrieve Geocode JSON.
+  // Perform AJAX call to retrieve Geocode JSON
   getJSON(url, function locationInfo (err, data) {
     var countyAbbr;
     var countyCode;
@@ -224,7 +220,7 @@ function showPosition(position) {
     var weatherURL;
     countyCode = "nonUS";
 
-    // Error when retrieving geocode data
+    // Check for errors when retrieving geocode data
     if ( err != null ) {
       x.innerHTML = "<div class=\"box\"><div class=\"weather\">An error occured when retrieving geolocation data. Please try again or select a county using the Search by County method. </div></div>";
     } else {
@@ -238,19 +234,24 @@ console.log(data);
         x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geocode error " + data.status + " when retrieving geolocation data. Please try again or select a county using the Search by County method. </div></div>";
       } else {
         // Check if user is in Washington
+        // Look through all address_components of results[0] to find state
         for (i = 0; i<data.results[0].address_components.length; i++) {
+          // If Washington State has been found
           if (data.results[0].address_components[i].short_name == "WA") {
+            // Look through all address_components of results[0] to find Washington State county
             for (j=0; j<data.results[0].address_components.length; j++) {
+              // If a county has been found, parse out the county name
               if (/(?= County)/g.test(data.results[0].address_components[j].long_name)) {
                 countyName = data.results[0].address_components[j].long_name.split(" ");
                 countyAbbr = "";
                 for (k=0; k<countyName.length - 1; k++) {
-                  if ( (k > 0) && (k != countyName.length - 2) ) {
+                  if ( k > 0 ) {
                     countyAbbr += " ";
                   }
                   countyAbbr += countyName[k];
                 }
 
+                // Determine the correct weather.gov county code
                 switch (countyAbbr) {
                   case "Adams":
                     countyCode = "WAC001";

@@ -523,12 +523,14 @@ img.dgobag-play {
   z-index: 1;
 }
 
-#events {
+#traffic {
   position: absolute;
   white-space: nowrap;
   overflow: hidden;
-  text-align: center;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 /****************
