@@ -9,9 +9,10 @@
   </head>
   <body>
     <div class="weather">
-    <span id="events"></span>
+      <div id="events"></div>
     </div>
     <div id="map"></div>
+
     <script>
       var n1;
       var n2;
@@ -21,7 +22,7 @@
       });
 
       function loading() {
-        $("#events").append("<center>Loading traffic map <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
+        $("#events").append("<center>Loading traffic map, this may take a few minutes <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
         var el1 = $("#el1");
         var el2 = $("#el2");
         var el3 = $("#el3");
@@ -56,8 +57,6 @@
         n1 = position.coords.latitude;
         n2 = position.coords.longitude;
 
-        document.getElementById("events").innerHTML = "";
-
         var map = new google.maps.Map(document.getElementById("map"), {
           zoom: 13,
           center: {lat: n1, lng: n2}
@@ -68,6 +67,7 @@
       }
 
     </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSykqDuOehJu_UbdtF9lG-vRXZ9wI9Gx4&callback=getLocation">
     </script>

@@ -20,3 +20,6 @@ Replace DIGITAL_GO_BAG_PAGE_ID, CEMP_PAGE_ID, EVENTS_PAGE_ID, KEY_PERSONNEL_PAGE
 ## Finding Weather Advisories via Geolocation
 Using the GPS template (not the default), users will be able to have their location automatically detected via HTML5's Geolocation function. Weather advisories for their Washington State county will be provided. Alternatively, users have the option to view weather advisories by selecting a Washington State county from a list.
 - Safari users should ensure that Wi-Fi is enabled on their device in order to use the Detect option
+
+## Finding Traffic Maps via Geolocation
+Using the Traffic template (not the default), users will be able to have their location automatically detected via HTML5's Geolocation function. A Google Maps traffic map tailored to their current GPS coordinates will be provided. 
