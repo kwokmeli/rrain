@@ -280,6 +280,11 @@ img.dgobag-apple {
 img.dgobag-play {
 }
 
+img.logo {
+  height: 80px;
+  width: auto;
+}
+
 /****************
 *    Header     *
 ****************/
@@ -522,6 +527,12 @@ img.dgobag-play {
 /****************
 *   Exceptions  *
 ****************/
+@media screen and (max-width: 573px) {
+  button {
+    display: block;
+    margin-bottom: 3px;
+  }
+}
 
 @media screen and (max-width: 551px) {
   img.cityhall {
@@ -530,6 +541,10 @@ img.dgobag-play {
 
   hr.cityhall {
     margin-top: 30px;
+  }
+
+  #foot-img {
+    height: 35px;
   }
 }
 
@@ -540,6 +555,10 @@ img.dgobag-play {
 
   .long-title {
     display: none;
+  }
+
+  img.logo {
+    height: 70px;
   }
 }
 
@@ -555,6 +574,10 @@ img.dgobag-play {
 
   .content a {
     font-size: 8pt;
+  }
+
+  #foot-img {
+    height: 27px;
   }
 }
 
@@ -618,6 +641,11 @@ img.dgobag-play {
   img.dgobag-logo {
   	position: absolute;
   }
+
+  img.logo {
+    height: 60px;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 329px) {
@@ -675,6 +703,10 @@ img.dgobag-play {
   hr.command {
     margin-top: 28px;
   }
+
+  #foot-img {
+    height: 22px;
+  }
 }
 
 @media screen and (max-width: 302px) {
@@ -718,6 +750,11 @@ img.dgobag-play {
 
   hr.map {
     margin-top: 22px;
+  }
+
+  img.logo {
+    height: 50px;
+    width: auto;
   }
 }
 
@@ -777,6 +814,13 @@ img.dgobag-play {
   }
 }
 
+@media screen and (max-width: 232px) {
+  img.logo {
+    height: 40px;
+    width: auto;
+  }
+}
+
 @media screen and (max-width: 189px) {
 	button {
 		height: 40px;
@@ -796,4 +840,16 @@ img.dgobag-play {
 	.content a {
 		font-size: 8pt;
 	}
+
+  img.logo {
+    height: 35px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 170px) {
+  img.logo {
+    height: 27px;
+    width: auto;
+  }
 }
