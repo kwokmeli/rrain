@@ -9,6 +9,7 @@ html, body {
   display: inline-block;
 }
 
+/*CSS for standard button styles across entire site*/
 button {
 	background-color: #00823e;
 	color: white !important;
@@ -461,6 +462,7 @@ img.dgobag-play {
   color: #2665bd;
 }
 
+/*CSS for matching text style*/
 .weather {
   font-family: "Helvetica";
   color: black;
@@ -512,6 +514,7 @@ img.dgobag-play {
   background-color: #239b5d;
 }
 
+/*CSS for Google Maps on traffic page*/
 #map {
   position: relative;
   height: 100%;
@@ -523,6 +526,7 @@ img.dgobag-play {
   z-index: 1;
 }
 
+/*CSS for loading animation on traffic page*/
 #traffic {
   position: absolute;
   white-space: nowrap;
