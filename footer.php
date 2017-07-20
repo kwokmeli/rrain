@@ -2,9 +2,9 @@
 
 <footer class="blog-footer">
   <a href="ABOUT_URL">
-  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/w.png" style="height: 6%"/>
-  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/doh.png"style="height: 6%"/>
-  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/nlm.png" style="height: 6%"/></a><br><br><br>
+  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/w.png" />
+  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/doh.png" />
+  <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/nlm.png" /></a><br><br><br>
 
 <div class="footer-text">
   RRAIN Washington is a joint project between the UW Health Sciences Library and the WA Department of Health
