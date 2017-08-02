@@ -1,0 +1,17 @@
+/* CSS for dividers on Digital Go Bag page */
+hr.dgobag {
+  border: none;
+  height: 1px;
+  background-color: #BEBEBE;
+  margin-right: -25px;
+  margin-left: -155px;
+}
+
+/* CSS for positioning individual images on index page */
+img.cloud {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  margin-left: 40px;
+  margin-right: 25px !important;
+}

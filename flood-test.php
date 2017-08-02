@@ -1,6 +1,5 @@
-<?php /*Template Name: GPS Template*/ ?>
+<?php /*Template Name: Flood Template*/ ?>
 <?php get_header(); ?>
-
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -10,9 +9,8 @@
 
 <div class="weather">
   <center>
-    <!-- <br>Select a county below to get weather information and weather advisories for that location. <br><br> -->
-    <!-- <button id="detect">DETECT</button> -->
-    <div id="countySelect"><br>Select a county to get additional weather advisories.<br><br></div>
+    <br>Select a method below to get weather advisories for your location: <br><br>
+    <button id="detect">DETECT</button>
     <div class="dropdown">
     <button id="search">SEARCH BY COUNTY</button>
       <div id="counties" class="content">
@@ -57,7 +55,7 @@
         <a class="countyLinks" id="WAC077">Yakima</a>
       </div>
     </div>
-    <br><br><br><br>
+    <br><br>
   </center>
   <span id="events">
   </span>
@@ -66,14 +64,12 @@
 <script>
 $(document).ready(function() {
   // Automatically detect location and provide corresponding weather advisories
-  // $("#detect").click(function() {
-  //   $("#events").text("");
-  //   $("#counties").css("visibility", "hidden");
-  $("#countySelect").css("visibility", "hidden");
-  $("#search").css("visibility", "hidden");
-  loading();
-  getLocation();
-  // });
+  $("#detect").click(function() {
+    $("#events").text("");
+    $("#counties").css("visibility", "hidden");
+    loading();
+    getLocation();
+  });
 
   // Trigger dropdown menu to manually select county
   $("#search").click(function(event) {
@@ -123,7 +119,7 @@ $(document).ready(function() {
           x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyName + " County.</center>";
         } else {
           // For each weather advisory, gather and print all information
-          x.innerHTML = "<center> Showing weather advisories for your detected location of " + countyName + " County. </center>";
+          x.innerHTML = "";
           for (i = 1; i < eventNumber; i++) {
             locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
             locations = locations.replace(/; /g, "<br>");
@@ -407,7 +403,7 @@ console.log(data);
                 x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " County.</center>";
               } else {
                 // For each weather advisory, gather and print all information
-                x.innerHTML = "<center> Showing weather advisories for your detected location of " + countyAbbr + " County. </center>";
+                x.innerHTML = "";
                 for (i = 1; i < eventNumber; i++) {
                   locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
                   locations = locations.replace(/; /g, "<br>");
@@ -424,8 +420,6 @@ console.log(data);
             }
           });
         }
-        $("#countySelect").css("visibility", "visible");
-        $("#search").css("visibility", "visible");
       }
     }
   });
