@@ -50,17 +50,29 @@ function showPosition(position) {
   var url;
   var temp;
 
+  // Call the OpenWeatherMap API
   url = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lng + "&appid=e4a97fb97ae96ac058617a4019146aaf";
 
   getJSON(url, function weatherInfo (err, data) {
 console.log(data);
 
+  // Convert temperature from Kelvin to Fahrenheit
   temp = Math.round(data.main.temp * 9 / 5 - 459.67);
 
-  x.innerHTML = "Temp: " + temp + "°F<br>Pressure: " + data.main.pressure + " millibar<br>Humidity: " + data.main.humidity +
+  x.innerHTML = "Current weather for your detected location of " + data.name + ":<br>Temp: " + temp + "°F<br>Pressure: " + data.main.pressure + " millibar<br>Humidity: " + data.main.humidity +
   "%<br>";
 
-  
+  // Collect all conditions, if any
+  for (var i=0; i<data.weather.length; i++) {
+    if (i == data.weather.length - 1) {
+      x.innerHTML += data.weather[i].main + "<br><br>";
+    } else {
+      x.innerHTML += data.weather[i].main + ", ";
+    }
+  }
+
+
+
   });
 
 }
