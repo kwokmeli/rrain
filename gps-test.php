@@ -213,9 +213,28 @@ function showPosition(position) {
   var lng = position.coords.longitude;
   // Reverse lookup location information using Google's Geocodes
   // Maximum of 2,500 hits/day, 5 hits/second
-  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(lat).concat(",").concat(lng).concat("&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0");
+  var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng +"&key=AIzaSyA78weTXhC2ea-y4QT4B_B7g4KrvStkeC0";
+  var openWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lng + "&appid=e4a97fb97ae96ac058617a4019146aaf";
+
+  getJSON(openWeatherUrl, function weatherInfo (err, data) {
+  // Convert temperature from Kelvin to Fahrenheit
+    temp = Math.round(data.main.temp * 9 / 5 - 459.67);
+
+    x.innerHTML += "<center>Showing current weather for your detected location of " + data.name + ".<br>Temp: " + temp + "°F<br>Pressure: " + data.main.pressure + " millibar<br>Humidity: " + data.main.humidity +
+    "%<br>";
+
+    // Collect all conditions, if any
+    for (var i=0; i<data.weather.length; i++) {
+      if (i == data.weather.length - 1) {
+        x.innerHTML += data.weather[i].main + "<br>";
+      } else {
+        x.innerHTML += data.weather[i].main + ", ";
+      }
+    }
+  });
+
   // Perform AJAX call to retrieve Geocode JSON
-  getJSON(url, function locationInfo (err, data) {
+  getJSON(googleUrl, function locationInfo (err, data) {
     var countyAbbr;
     var countyCode;
     var countyName;
@@ -386,7 +405,7 @@ console.log(data);
         } else if (countyCode == "invalidCounty") {
           x.innerHTML = "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for your county. Please try again or select a county using the Search by County method. </div></div>";
         } else {
-          weatherURL = "https://alerts.weather.gov/cap/wwaatmget.php?x=".concat(countyCode).concat("&y=1");
+          weatherURL = "https://alerts.weather.gov/cap/wwaatmget.php?x=" + countyCode + "&y=1";
 
           getText(weatherURL, function(err, data) {
             var parser;
@@ -404,10 +423,10 @@ console.log(data);
               eventNumber = xmlDoc.getElementsByTagName("id").length;
 
               if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
-                x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " County.</center>";
+                x.innerHTML += "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " County.</center>";
               } else {
                 // For each weather advisory, gather and print all information
-                x.innerHTML = "<center> Showing weather advisories for your detected location of " + countyAbbr + " County. </center>";
+                x.innerHTML += "<center> Showing weather advisories for your detected location of " + countyAbbr + " County. </center>";
                 for (i = 1; i < eventNumber; i++) {
                   locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
                   locations = locations.replace(/; /g, "<br>");
