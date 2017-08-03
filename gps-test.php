@@ -10,8 +10,6 @@
 
 <div class="weather">
   <center>
-    <!-- <br>Select a county below to get weather information and weather advisories for that location. <br><br> -->
-    <!-- <button id="detect">DETECT</button> -->
     <div id="countySelect"><br>Select a county to get additional weather advisories.<br><br></div>
     <div class="dropdown">
     <button id="search">SEARCH BY COUNTY</button>
@@ -58,6 +56,7 @@
       </div>
     </div>
     <br><br><br><br>
+    <div id="currentWeather">f</div>
   </center>
   <span id="events">
   </span>
@@ -71,6 +70,7 @@ $(document).ready(function() {
   //   $("#counties").css("visibility", "hidden");
   $("#countySelect").css("visibility", "hidden");
   $("#search").css("visibility", "hidden");
+  $("#currentWeather").css("visibility", "hidden");
   loading();
   getLocation();
   // });
@@ -123,7 +123,7 @@ $(document).ready(function() {
           x.innerHTML = "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyName + " County.</center>";
         } else {
           // For each weather advisory, gather and print all information
-          x.innerHTML = "<center> Showing weather advisories for your detected location of " + countyName + " County. </center>";
+          x.innerHTML = "<center> Showing weather advisories for " + countyName + " County. </center>";
           for (i = 1; i < eventNumber; i++) {
             locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
             locations = locations.replace(/; /g, "<br>");
