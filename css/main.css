@@ -414,7 +414,7 @@ header. Disappears when the window size is too small. */
 
 /* CSS for non-index page sub-titles */
 .sub-title {
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   margin-top: -6px;
   font-family: 'Helvetica' !important;
   font-size: 11pt;

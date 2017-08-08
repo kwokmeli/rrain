@@ -1,4 +1,4 @@
-<?php /*Template Name: GPS Template*/ ?>
+<?php /*Template Name: GPS Weather Template*/ ?>
 <?php get_header(); ?>
 
 <head>
@@ -59,6 +59,7 @@
     <div id="currentWeather">f</div>
   </center>
   <span id="events">
+    <span id="loading">
   </span>
 </div>
 
@@ -99,6 +100,7 @@ $(document).ready(function() {
     var weatherURL;
 
     $("#events").text("");
+    $("#loading").text("");
     loading();
     countyCode = $(this).attr("id");
     countyName = $(event.target).text();
@@ -178,7 +180,7 @@ var getText = function(url, callback) {
 
 // Set blinking animation for loading symbol
 function loading() {
-  $("#events").append("<center>Loading weather advisories <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
+  $("#loading").append("<center>Loading weather advisories <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
   var el1 = $("#el1");
   var el2 = $("#el2");
   var el3 = $("#el3");
@@ -217,16 +219,16 @@ function showPosition(position) {
   var openWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lng + "&appid=e4a97fb97ae96ac058617a4019146aaf";
 
   getJSON(openWeatherUrl, function weatherInfo (err, data) {
-  // Convert temperature from Kelvin to Fahrenheit
+    // Convert temperature from Kelvin to Fahrenheit
     temp = Math.round(data.main.temp * 9 / 5 - 459.67);
 
     x.innerHTML += "<center>Showing current weather for your detected location of " + data.name + ".<br>Temp: " + temp + "°F<br>Pressure: " + data.main.pressure + " millibar<br>Humidity: " + data.main.humidity +
-    "%<br>";
+    "%<br>Condition: ";
 
     // Collect all conditions, if any
     for (var i=0; i<data.weather.length; i++) {
       if (i == data.weather.length - 1) {
-        x.innerHTML += data.weather[i].main + "<br>";
+        x.innerHTML += data.weather[i].main + "<br><br>";
       } else {
         x.innerHTML += data.weather[i].main + ", ";
       }
@@ -443,6 +445,10 @@ console.log(data);
             }
           });
         }
+        $("#loading").css("visibility", "hidden");
+        $("#el1").css("visibility", "hidden");
+        $("#el2").css("visibility", "hidden");
+        $("#el3").css("visibility", "hidden");
         $("#countySelect").css("visibility", "visible");
         $("#search").css("visibility", "visible");
       }
