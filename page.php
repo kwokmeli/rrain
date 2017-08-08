@@ -5,12 +5,12 @@
           <?php echo get_post_field('post_content', $post->ID); ?>
         </div>
         <?php get_footer(); ?>
-<?php } else if ( is_page(DIGITAL_GO_BAG_PAGE_ID) ) { ?> <!-- CSS for Digital Go Bag page -->
+<?php } else if ( is_page(102) ) { ?> <!-- CSS for Digital Go Bag page -->
         <div class="dgobag">
           <?php echo get_post_field('post_content', $post->ID); ?>
         </div>
         <?php wp_footer(); ?>
-<?php } else if (  is_page(CEMP_PAGE_ID) || is_page(EVENTS_PAGE_ID) || is_page(KEY_PERSONNEL_PAGE_ID) || is_page(FOCUS_GROUP_PAGE_ID) ) { ?> <!-- CSS for CEMP, Events, Key Personnel, and Focus Group pages -->
+<?php } else if (  is_page(133) || is_page(EVENTS_PAGE_ID) || is_page(KEY_PERSONNEL_PAGE_ID) || is_page(FOCUS_GROUP_PAGE_ID) ) { ?> <!-- CSS for CEMP, Events, Key Personnel, and Focus Group pages -->
         <div class="box">
           <div class="cemp">
             <?php echo get_post_field('post_content', $post->ID); ?>

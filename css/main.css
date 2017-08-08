@@ -7,6 +7,7 @@ html, body {
   width: 100% !important;
   display: inline-block;
   /*overflow-x: hidden;*/
+  min-width: 231px;
   height: 100%;
 }
 
@@ -433,7 +434,6 @@ header. Disappears when the window size is too small. */
 
 /* CSS for Digital Go Bag page */
 .dgobag {
-  overflow-x: hidden;
   font-family: 'Helvetica' !important;
   font-size: 11pt;
   position: relative;
@@ -606,6 +606,22 @@ header. Disappears when the window size is too small. */
   }
 }
 
+@media screen and (max-width: 449px) {
+  img.wa {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  img.chem {
+    top: 23px;
+  }
+
+  hr.chem {
+    margin-top: 28px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   button {
     height: 40px;
@@ -613,36 +629,36 @@ header. Disappears when the window size is too small. */
   }
 
   .content {
-     width: 125px;
+    width: 125px;
    }
 
-   .content a {
-     font-size: 8pt;
-   }
+  .content a {
+    font-size: 8pt;
+  }
 
-   #foot-img {
-     height: 27px;
-   }
+  #foot-img {
+    height: 27px;
+  }
  }
 
 @media screen and (max-width: 390px) {
  img.cityhall {
-   top: 37px;
+   top: 24px;
  }
 
  hr.cityhall {
-   margin-top: 49px;
+   margin-top: 34px;
  }
 }
 
 @media screen and (max-width: 388px) {
- img.chem {
-   top: 23px;
- }
+  img.cityhall {
+    top: 37px;
+  }
 
- hr.chem {
-   margin-top: 28px;
- }
+  hr.cityhall {
+    margin-top: 52px;
+  }
 }
 
 @media screen and (max-width: 384px) {
@@ -677,6 +693,16 @@ header. Disappears when the window size is too small. */
   }
 }
 
+@media screen and (max-width: 345px) {
+  img.flood {
+    top: 21px;
+  }
+
+  hr.flood {
+    margin-top: 25px;
+  }
+}
+
 @media screen and (max-width: 337px) {
   img.dgobag-logo-oem-shelter {
     position: absolute;
@@ -692,7 +718,17 @@ header. Disappears when the window size is too small. */
   }
 }
 
-@media screen and (max-width: 329px) {
+@media screen and (max-width: 330px) {
+  img.chem {
+    top: 34px;
+  }
+
+  hr.chem {
+    margin-top: 45px;
+  }
+}
+
+@media screen and (max-width: 327px) {
   img.diseases {
     margin-top: 10px;
   }
@@ -708,7 +744,7 @@ header. Disappears when the window size is too small. */
   }
 }
 
-@media screen and (max-width: 316px) {
+@media screen and (max-width: 320px) {
   img.cloud {
     top: 24px;
   }
@@ -720,22 +756,58 @@ header. Disappears when the window size is too small. */
 
 @media screen and (max-width: 314px) {
   button {
-          height: 40px;
-          width: 125px;
+    height: 40px;
+    width: 125px;
   }
 
   button#search {
-          position: relative;
-          top: 3px;
-          left: 3px;
+    position: relative;
+    top: 3px;
+    left: 3px;
   }
 
   .content {
-          width: 125px;
+    width: 125px;
   }
 
   .content a {
-          font-size: 8pt;
+    font-size: 8pt;
+  }
+}
+
+@media screen and (max-width: 309px) {
+  img.command {
+    top: 27px;
+  }
+
+  hr.command {
+    margin-top: 28px;
+  }
+
+  img.wa {
+    top: 23px;
+  }
+
+  hr.wa {
+    margin-top: 33px;
+  }
+}
+
+@media screen and (max-width: 307px) {
+  img.earthquakes {
+    top: 25px;
+  }
+
+  hr.earthquakes {
+    margin-top: 19px;
+  }
+
+  img.wa {
+    top: 23px;
+  }
+
+  hr.wa {
+    margin-top: 30px;
   }
 }
 
@@ -779,15 +851,28 @@ header. Disappears when the window size is too small. */
   }
 }
 
+
+@media screen and (max-width: 295px) {
+  img.map {
+    top: 19px;
+  }
+
+  hr.map {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 292px) {
+  img.wa {
+    top: 32px;
+  }
+
+  hr.wa {
+    margin-top: 52px;
+  }
+}
+
 @media screen and (max-width: 291px) {
-  img.traffic {
-    top: 21px;
-  }
-
-  hr.traffic {
-    margin-top: 22px;
-  }
-
   img.map {
     top: 19px;
   }
@@ -802,13 +887,13 @@ header. Disappears when the window size is too small. */
   }
 }
 
-@media screen and (max-width: 287px) {
-  img.fire {
-    top: 23px;
+@media screen and (max-width: 289px) {
+  img.traffic {
+    top: 21px;
   }
 
-  hr.fire {
-    margin-top: 24px;
+  hr.traffic {
+    margin-top: 22px;
   }
 }
 
@@ -828,7 +913,20 @@ header. Disappears when the window size is too small. */
   hr.chem {
     margin-top: 47px;
   }
+}
 
+@media screen and (max-width: 285px) {
+  img.fire {
+    top: 23px;
+  }
+
+  hr.fire {
+    margin-top: 24px;
+  }
+}
+
+
+@media screen and (max-width: 284px) {
   img.bag {
     top: 15px;
   }
@@ -838,7 +936,7 @@ header. Disappears when the window size is too small. */
   }
 }
 
-@media screen and (max-width: 279px) {
+@media screen and (max-width: 277px) {
   img.cityhall {
     top: 56px;
   }
@@ -858,6 +956,25 @@ header. Disappears when the window size is too small. */
   }
 }
 
+@media screen and (max-width: 259px) {
+  img.chem {
+    top: 43px;
+  }
+
+  hr.chem {
+    margin-top: 63px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  img.traffic {
+    top: 32px;
+  }
+
+  hr.traffic {
+    margin-top: 42px;
+  }
+}
 @media screen and (max-width: 232px) {
   img.logo {
     height: 40px;
