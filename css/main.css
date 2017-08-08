@@ -6,7 +6,8 @@ html, body {
   font-size: 16pt;
   width: 100% !important;
   display: inline-block;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
+  height: 100%;
 }
 
 button {
@@ -396,7 +397,7 @@ header. Disappears when the window size is too small. */
 
 /* CSS for index page menu titles */
 .blog-post-title {
-
+  overflow-x: hidden;
 }
 
 .blog-post-title a {
@@ -412,6 +413,7 @@ header. Disappears when the window size is too small. */
 
 /* CSS for non-index page sub-titles */
 .sub-title {
+  overflow-x: hidden;
   margin-top: -6px;
   font-family: 'Helvetica' !important;
   font-size: 11pt;
@@ -431,6 +433,7 @@ header. Disappears when the window size is too small. */
 
 /* CSS for Digital Go Bag page */
 .dgobag {
+  overflow-x: hidden;
   font-family: 'Helvetica' !important;
   font-size: 11pt;
   position: relative;
@@ -462,6 +465,7 @@ header. Disappears when the window size is too small. */
 
 /* CSS for a green box with shadow */
 .box {
+  overflow-x: hidden;
   font-size: .8em;
   border: 3px solid green;
   margin: 25px;
@@ -471,6 +475,7 @@ header. Disappears when the window size is too small. */
 
 /* CSS for About page */
 .about {
+  overflow-x: hidden;
   font-family: "Helvetica";
   color: black;
   font-size: 12pt;
@@ -536,6 +541,30 @@ header. Disappears when the window size is too small. */
 
 .content a:hover {
   background-color: #239b5d;
+}
+
+/* CSS for loading animation on traffic page */
+#traffic {
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+/* CSS for Google Maps on traffic page */
+/* TODO: Removing overflow-x: hidden in the html, body tag fixes double scrollbar ? */
+#map {
+  position: relative;
+  height: 100%;
+  top: -20px !important;
+  margin-bottom: -20px;
+  font-family: "Helvetica";
+  color: black;
+  font-size: 12.5pt !important;
+  z-index: 1;
 }
 
 /****************
