@@ -55,12 +55,10 @@
         <a class="countyLinks" id="WAC077">Yakima</a>
       </div>
     </div>
-    <br><br><br><br>
+    <br><br>
     <div id="currentWeather"></div>
   </center>
-  <span id="events">
-    <span id="loading">
-  </span>
+  <span id="events"></span>
 </div>
 
 <script>
@@ -177,7 +175,7 @@ var getText = function(url, callback) {
 
 // Set blinking animation for loading symbol
 function loading() {
-  $("#loading").append("<center>Loading weather advisories <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
+  $("#events").append("<center>Loading weather advisories <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
   var el1 = $("#el1");
   var el2 = $("#el2");
   var el3 = $("#el3");
@@ -208,7 +206,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  var temp, humidity;
+  var temp, humidity, weatherLocation;
   var condition = "";
   // Retrieve GPS coordinates using Geolocation
   var lat = position.coords.latitude;
@@ -221,14 +219,12 @@ function showPosition(position) {
   var openWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lng + "&appid=e4a97fb97ae96ac058617a4019146aaf";
 
   getJSON(openWeatherUrl, function weatherInfo (err, data) {
-  console.log(data);
+console.log(data);
     // TODO: Handle undefined values from OpenWeatherMap
     // Convert temperature from Kelvin to Fahrenheit
     temp = Math.round(data.main.temp * 9 / 5 - 459.67);
     humidity = data.main.humidity;
-
-    // x.innerHTML += "<center>Showing current weather for your detected location of " + data.name + ".<br>Temp: " + temp + "°F<br>Humidity: " + data.main.humidity +
-    // "%<br>Condition: ";
+    weatherLocation = data.name;
 
     // Collect all conditions, if any
     if (data.weather.length == 0) {
@@ -242,237 +238,228 @@ function showPosition(position) {
         }
       }
     }
-  });
+    // Perform AJAX call to retrieve Geocode JSON
+    getJSON(googleUrl, function locationInfo (err, data) {
+      var countyAbbr;
+      var countyCode;
+      var countyName;
+      var state;
+      var weatherURL;
+      countyCode = "nonUS";
 
-  // Perform AJAX call to retrieve Geocode JSON
-  getJSON(googleUrl, function locationInfo (err, data) {
-    var countyAbbr;
-    var countyCode;
-    var countyName;
-    var state;
-    var weatherURL;
-    countyCode = "nonUS";
-
-    // Check for errors when retrieving geocode data
-    if ( err != null ) {
-      x.innerHTML = "<div class=\"box\"><div class=\"weather\">An error occured when retrieving geolocation data. Please try again or select a county using the Search by County method. </div></div>";
-    } else {
-      // Safari on iOS: XMLHttpRequest.responseType is always type text
-      if ( typeof data == 'string' ) {
-        data = JSON.parse(data);
-      }
-console.log(data);
-
-      if ( data.status != "OK" ) {
-        x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geocode error " + data.status + " when retrieving geolocation data. Please try again or select a county using the Search by County method. </div></div>";
+      // Check for errors when retrieving geocode data
+      if ( err != null ) {
+        x.innerHTML = "<div class=\"box\"><div class=\"weather\">An error occured when retrieving geolocation data. Please try again or select a county using the Search by County method. </div></div>";
       } else {
-        // Check if user is in Washington
-        // Look through all address_components of results[0] to find state
-        for (i = 0; i<data.results[0].address_components.length; i++) {
-          // If Washington State has been found
-          if (data.results[0].address_components[i].short_name == "WA") {
-            // Look through all address_components of results[0] to find Washington State county
-            for (j=0; j<data.results[0].address_components.length; j++) {
-              // If a county has been found, parse out the county name
-              if (/(?= County)/g.test(data.results[0].address_components[j].long_name)) {
-                countyName = data.results[0].address_components[j].long_name.split(" ");
-                countyAbbr = "";
-                for (k=0; k<countyName.length - 1; k++) {
-                  if ( k > 0 ) {
-                    countyAbbr += " ";
-                  }
-                  countyAbbr += countyName[k];
-                }
+        // Safari on iOS: XMLHttpRequest.responseType is always type text
+        if ( typeof data == 'string' ) {
+          data = JSON.parse(data);
+        }
+  console.log(data);
 
-                // Determine the correct weather.gov county code
-                switch (countyAbbr) {
-                  case "Adams":
-                    countyCode = "WAC001";
-                    break;
-                  case "Asotin":
-                    countyCode = "WAC003";
-                    break;
-                  case "Benton":
-                    countyCode = "WAC005";
-                    break;
-                  case "Chelan":
-                    countyCode = "WAC007";
-                    break;
-                  case "Clallam":
-                    countyCode = "WAC009";
-                    break;
-                  case "Clark":
-                    countyCode = "WAC011";
-                    break;
-                  case "Columbia":
-                    countyCode = "WAC013";
-                    break;
-                  case "Cowlitz":
-                    countyCode = "WAC015";
-                    break;
-                  case "Douglas":
-                    countyCode = "WAC017";
-                    break;
-                  case "Ferry":
-                    countyCode = "WAC019";
-                    break;
-                  case "Franklin":
-                    countyCode = "WAC021";
-                    break;
-                  case "Garfield":
-                    countyCode = "WAC023";
-                    break;
-                  case "Grant":
-                    countyCode = "WAC025";
-                    break;
-                  case "Grays Harbor":
-                    countyCode = "WAC027";
-                    break;
-                  case "Island":
-                    countyCode = "WAC029";
-                    break;
-                  case "Jefferson":
-                    countyCode = "WAC031";
-                    break;
-                  case "King":
-                    countyCode = "WAC033";
-                    break;
-                  case "Kitsap":
-                    countyCode = "WAC035";
-                    break;
-                  case "Kittitas":
-                    countyCode = "WAC037";
-                    break;
-                  case "Klickitat":
-                    countyCode = "WAC039";
-                    break;
-                  case "Lewis":
-                    countyCode = "WAC041";
-                    break;
-                  case "Lincoln":
-                    countyCode = "WAC043";
-                    break;
-                  case "Mason":
-                    countyCode = "WAC045";
-                    break;
-                  case "Okanogan":
-                    countyCode = "WAC047";
-                    break;
-                  case "Pacific":
-                    countyCode = "WAC049";
-                    break;
-                  case "Pend Oreille":
-                    countyCode = "WAC051";
-                    break;
-                  case "Pierce":
-                    countyCode = "WAC053";
-                    break;
-                  case "San Juan":
-                    countyCode = "WAC055";
-                    break;
-                  case "Skagit":
-                    countyCode = "WAC057";
-                    break;
-                  case "Skamania":
-                    countyCode = "WAC059";
-                    break;
-                  case "Snohomish":
-                    countyCode = "WAC061";
-                    break;
-                  case "Spokane":
-                    countyCode = "WAC063";
-                    break;
-                  case "Stevens":
-                    countyCode = "WAC065";
-                    break;
-                  case "Thurston":
-                    countyCode = "WAC067";
-                    break;
-                  case "Wahkiakum":
-                    countyCode = "WAC069";
-                    break;
-                  case "Walla Walla":
-                    countyCode = "WAC071";
-                    break;
-                  case "Whatcom":
-                    countyCode = "WAC073";
-                    break;
-                  case "Whitman":
-                    countyCode = "WAC075";
-                    break;
-                  case "Yakima":
-                    countyCode = "WAC077";
-                    break;
-                  default:
-                    countyCode = "invalidCounty";
+        if ( data.status != "OK" ) {
+          x.innerHTML = "<div class=\"box\"><div class=\"weather\">Geocode error " + data.status + " when retrieving geolocation data. Please try again or select a county using the Search by County method. </div></div>";
+        } else {
+          // Check if user is in Washington
+          // Look through all address_components of results[0] to find state
+          for (i = 0; i<data.results[0].address_components.length; i++) {
+            // If Washington State has been found
+            if (data.results[0].address_components[i].short_name == "WA") {
+              // Look through all address_components of results[0] to find Washington State county
+              for (j=0; j<data.results[0].address_components.length; j++) {
+                // If a county has been found, parse out the county name
+                if (/(?= County)/g.test(data.results[0].address_components[j].long_name)) {
+                  countyName = data.results[0].address_components[j].long_name.split(" ");
+                  countyAbbr = "";
+                  for (k=0; k<countyName.length - 1; k++) {
+                    if ( k > 0 ) {
+                      countyAbbr += " ";
+                    }
+                    countyAbbr += countyName[k];
+                  }
+
+                  // Determine the correct weather.gov county code
+                  switch (countyAbbr) {
+                    case "Adams":
+                      countyCode = "WAC001";
+                      break;
+                    case "Asotin":
+                      countyCode = "WAC003";
+                      break;
+                    case "Benton":
+                      countyCode = "WAC005";
+                      break;
+                    case "Chelan":
+                      countyCode = "WAC007";
+                      break;
+                    case "Clallam":
+                      countyCode = "WAC009";
+                      break;
+                    case "Clark":
+                      countyCode = "WAC011";
+                      break;
+                    case "Columbia":
+                      countyCode = "WAC013";
+                      break;
+                    case "Cowlitz":
+                      countyCode = "WAC015";
+                      break;
+                    case "Douglas":
+                      countyCode = "WAC017";
+                      break;
+                    case "Ferry":
+                      countyCode = "WAC019";
+                      break;
+                    case "Franklin":
+                      countyCode = "WAC021";
+                      break;
+                    case "Garfield":
+                      countyCode = "WAC023";
+                      break;
+                    case "Grant":
+                      countyCode = "WAC025";
+                      break;
+                    case "Grays Harbor":
+                      countyCode = "WAC027";
+                      break;
+                    case "Island":
+                      countyCode = "WAC029";
+                      break;
+                    case "Jefferson":
+                      countyCode = "WAC031";
+                      break;
+                    case "King":
+                      countyCode = "WAC033";
+                      break;
+                    case "Kitsap":
+                      countyCode = "WAC035";
+                      break;
+                    case "Kittitas":
+                      countyCode = "WAC037";
+                      break;
+                    case "Klickitat":
+                      countyCode = "WAC039";
+                      break;
+                    case "Lewis":
+                      countyCode = "WAC041";
+                      break;
+                    case "Lincoln":
+                      countyCode = "WAC043";
+                      break;
+                    case "Mason":
+                      countyCode = "WAC045";
+                      break;
+                    case "Okanogan":
+                      countyCode = "WAC047";
+                      break;
+                    case "Pacific":
+                      countyCode = "WAC049";
+                      break;
+                    case "Pend Oreille":
+                      countyCode = "WAC051";
+                      break;
+                    case "Pierce":
+                      countyCode = "WAC053";
+                      break;
+                    case "San Juan":
+                      countyCode = "WAC055";
+                      break;
+                    case "Skagit":
+                      countyCode = "WAC057";
+                      break;
+                    case "Skamania":
+                      countyCode = "WAC059";
+                      break;
+                    case "Snohomish":
+                      countyCode = "WAC061";
+                      break;
+                    case "Spokane":
+                      countyCode = "WAC063";
+                      break;
+                    case "Stevens":
+                      countyCode = "WAC065";
+                      break;
+                    case "Thurston":
+                      countyCode = "WAC067";
+                      break;
+                    case "Wahkiakum":
+                      countyCode = "WAC069";
+                      break;
+                    case "Walla Walla":
+                      countyCode = "WAC071";
+                      break;
+                    case "Whatcom":
+                      countyCode = "WAC073";
+                      break;
+                    case "Whitman":
+                      countyCode = "WAC075";
+                      break;
+                    case "Yakima":
+                      countyCode = "WAC077";
+                      break;
+                    default:
+                      countyCode = "invalidCounty";
+                  }
                 }
               }
             }
           }
-        }
 
-        if (countyCode == "nonUS") {
-          x.innerHTML = "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for locations outside Washington state. Please select a county using the Search by County method. </div></div>";
-        } else if (countyCode == "invalidCounty") {
-          x.innerHTML = "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for your county. Please try again or select a county using the Search by County method. </div></div>";
-        } else {
-          weatherURL = "https://alerts.weather.gov/cap/wwaatmget.php?x=" + countyCode + "&y=1";
+          x.innerHTML = "<center>" + weatherLocation + "<br>Temp: " + temp + "°F<br>Humidity: " + humidity + "%<br>Condition: " + condition + "<br><br>";
 
-          getText(weatherURL, function(err, data) {
-            var parser;
-            var xmlDoc;
-            var eventNumber;
-            var locations;
+          if (countyCode == "nonUS") {
+            x.innerHTML += "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for locations outside Washington state. Please select a county using the Search by County method. </div></div>";
+          } else if (countyCode == "invalidCounty") {
+            x.innerHTML += "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for your county. Please try again or select a county using the Search by County method. </div></div>";
+          } else {
+            weatherURL = "https://alerts.weather.gov/cap/wwaatmget.php?x=" + countyCode + "&y=1";
 
-            if (err != null) {
-              x.innerHTML = "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again or select a county using the Search by County method. </div></div>";
-            } else {
-              // Parse the weather advisory XML
-              parser = new DOMParser();
-              xmlDoc = parser.parseFromString(data, "text/xml");
-              
-              // Find the total number of weather advisories + 1 (the header counts as an XML event)
-              eventNumber = xmlDoc.getElementsByTagName("id").length;
+            getText(weatherURL, function(err, data) {
+              var parser;
+              var xmlDoc;
+              var eventNumber;
+              var locations;
 
-              if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
-                x.innerHTML += "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " County.</center>";
+              if (err != null) {
+                x.innerHTML += "<div class=\"box\"><div class=\"weather\">Error " + err + " when retrieving weather advisories. Please try again or select a county using the Search by County method. </div></div>";
               } else {
-                // For each weather advisory, gather and print all information
-                x.innerHTML += "<center>Temp: " + temp + "°F<br>Humidity: " + humidity + "<br>Condition: " + condition;
-                x.innerHTML += "<center> Showing weather advisories for your detected location of " + countyAbbr + " County. </center>";
-                for (i = 1; i < eventNumber; i++) {
-                  locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
-                  locations = locations.replace(/; /g, "<br>");
-                  x.innerHTML += "<div class=\"box\"><div class=\"weather\">"
-                    + "<b>" + locations + "</b>" + "<br><br><a href=\""
-                    + xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue + "\">"
-                    + xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "</a><br><b>Published</b>: "
-                    + xmlDoc.getElementsByTagName("published")[i-1].childNodes[0].nodeValue + " | <b>Updated</b>: "
-                    + xmlDoc.getElementsByTagName("updated")[i-1].childNodes[0].nodeValue + "<br><br>"
-                    + xmlDoc.getElementsByTagName("summary")[i-1].childNodes[0].nodeValue;
-                  x.innerHTML += "</div></div>";
+                // Parse the weather advisory XML
+                parser = new DOMParser();
+                xmlDoc = parser.parseFromString(data, "text/xml");
+
+                // Find the total number of weather advisories + 1 (the header counts as an XML event)
+                eventNumber = xmlDoc.getElementsByTagName("id").length;
+
+                if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
+                  x.innerHTML += "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " County.</center>";
+                } else {
+                  // For each weather advisory, gather and print all information
+                  // x.innerHTML = "<center>" + weatherLocation + "<br>Temp: " + temp + "°F<br>Humidity: " + humidity + "%<br>Condition: " + condition;
+                  x.innerHTML += "<center> Showing weather advisories for your detected location of " + countyAbbr + " County. </center>";
+                  for (i = 1; i < eventNumber; i++) {
+                    locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
+                    locations = locations.replace(/; /g, "<br>");
+                    x.innerHTML += "<div class=\"box\"><div class=\"weather\">"
+                      + "<b>" + locations + "</b>" + "<br><br><a href=\""
+                      + xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue + "\">"
+                      + xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "</a><br><b>Published</b>: "
+                      + xmlDoc.getElementsByTagName("published")[i-1].childNodes[0].nodeValue + " | <b>Updated</b>: "
+                      + xmlDoc.getElementsByTagName("updated")[i-1].childNodes[0].nodeValue + "<br><br>"
+                      + xmlDoc.getElementsByTagName("summary")[i-1].childNodes[0].nodeValue;
+                    x.innerHTML += "</div></div>";
+                  }
                 }
               }
-            }
-          });
+            });
+          }
+          showDropdown();
         }
-        showDropdown();
-        // $("#loading").css("visibility", "hidden");
-        // $("#el1").css("visibility", "hidden");
-        // $("#el2").css("visibility", "hidden");
-        // $("#el3").css("visibility", "hidden");
-        // $("#countySelect").css("visibility", "visible");
-        // $("#search").css("visibility", "visible");
       }
-    }
+    });
   });
 }
 
 function showDropdown() {
-  $("#loading").css("visibility", "hidden");
-  $("#el1").css("visibility", "hidden");
-  $("#el2").css("visibility", "hidden");
-  $("#el3").css("visibility", "hidden");
   $("#countySelect").css("visibility", "visible");
   $("#search").css("visibility", "visible");
 }
