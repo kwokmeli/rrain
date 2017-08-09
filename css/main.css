@@ -567,10 +567,11 @@ header. Disappears when the window size is too small. */
   z-index: 1;
 }
 
+/* CSS for current weather on WA Weather page */
 #square1 {
-  width: 70%;
-  height: 200px;
-  /*width: 400px;*/
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
   background: #00823e;
   z-index: 1;
 }
@@ -578,31 +579,29 @@ header. Disappears when the window size is too small. */
 #square2 {
   position: relative;
   display: inline-block;
-  width: 98%;
+  width: 290px;
+  height: 290px;
   top: 5px;
-  left: 2px;
-  height: 190px;
-  /*width: 390px;*/
+  border-radius: 50%;
   background: white;
   z-index: 2;
 }
 
 #square3 {
   position: relative;
-  width: 98%;
-  height: 185px;
-  /*width: 385px;*/
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
   background: #00823e;
   z-index: 3;
   display: inline-block;
-  top: 3px;
-  left: 1px;
+  top: 5px;
   text-align: center;
 }
 
 #temp {
   position: relative;
-  top: 20%;
+  top: 90px;
   font-size: 48pt;
   color: white;
   font-weight: bold;
@@ -619,21 +618,23 @@ header. Disappears when the window size is too small. */
 
 #city {
   position: relative;
-  top: 8%;
+  top: 65px;
+  left: 40px;
+  max-width: 200px;
   font-size: 16pt;
   color: white;
 }
 
 #condition {
   position: relative;
-  top: 30%;
+  top: 115px;
   font-size: 14pt;
   color: white;
 }
 
 #humidity {
   position: relative;
-  top: 30%;
+  top: 115px;
   font-size: 14pt;
   color: white;
 }
