@@ -12,11 +12,11 @@
     <?php if (is_front_page()) {
       ?> <title> <?php echo get_bloginfo('name'); ?> </title>
       <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a>&nbsp; <div class="long-title">Response and Recovery App in Washington State</div></div>
-      <a href="ABOUT_PAGE"><img id="index-header-logo" src="<?php bloginfo('template_directory'); ?>/img/icon-outline.png"/></a><?php
+      <a href="ABOUT_PAGE_URL"><img id="index-header-logo" src="<?php bloginfo('template_directory'); ?>/img/icon-outline.png"/></a><?php
     } else {
       ?> <title> <?php echo get_the_title(); ?> </title>
       <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a> &nbsp; <div class="header-selection"><?php echo get_the_title(); ?></div></div>
-      <a href="ABOUT_PAGE"><img id="header-logo" src="<?php bloginfo('template_directory'); ?>/img/icon-outline.png"/></a>
+      <a href="ABOUT_PAGE_URL"><img id="header-logo" src="<?php bloginfo('template_directory'); ?>/img/icon-outline.png"/></a>
       <?php
     } ?>
 

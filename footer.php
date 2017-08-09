@@ -1,7 +1,7 @@
 </div><!-- /.container -->
 
 <footer class="blog-footer">
-  <a href="ABOUT_URL">
+  <a href="ABOUT_PAGE_URL">
   <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/w.png" />
   <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/doh.png" />
   <img id="foot-img" src="<?php bloginfo('template_directory'); ?>/img/nlm.png" /></a><br><br><br>
