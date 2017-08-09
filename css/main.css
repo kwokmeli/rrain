@@ -517,7 +517,7 @@ header. Disappears when the window size is too small. */
   position: absolute;
   overflow-y: scroll;
   overflow-x: hidden;
-  z-index: 1;
+  z-index: 10;
   visibility: hidden;
   height: 250px;
   width: 175px;
@@ -555,7 +555,7 @@ header. Disappears when the window size is too small. */
 }
 
 /* CSS for Google Maps on traffic page */
-/* TODO: Removing overflow-x: hidden in the html, body tag fixes double scrollbar ? */
+/* REVIEW: Removing overflow-x: hidden in the html, body tag fixes double scrollbar ? */
 #map {
   position: relative;
   height: 100%;
@@ -565,6 +565,77 @@ header. Disappears when the window size is too small. */
   color: black;
   font-size: 12.5pt !important;
   z-index: 1;
+}
+
+#square1 {
+  width: 70%;
+  height: 200px;
+  /*width: 400px;*/
+  background: #00823e;
+  z-index: 1;
+}
+
+#square2 {
+  position: relative;
+  display: inline-block;
+  width: 98%;
+  top: 5px;
+  left: 2px;
+  height: 190px;
+  /*width: 390px;*/
+  background: white;
+  z-index: 2;
+}
+
+#square3 {
+  position: relative;
+  width: 98%;
+  height: 185px;
+  /*width: 385px;*/
+  background: #00823e;
+  z-index: 3;
+  display: inline-block;
+  top: 3px;
+  left: 1px;
+  text-align: center;
+}
+
+#temp {
+  position: relative;
+  top: 20%;
+  font-size: 48pt;
+  color: white;
+  font-weight: bold;
+}
+
+#degrees {
+  position: absolute;
+  top: -15px;
+  display: inline-block;
+  font-size: 18pt;
+  color: white;
+  font-weight: bold;
+}
+
+#city {
+  position: relative;
+  top: 8%;
+  font-size: 16pt;
+  color: white;
+}
+
+#condition {
+  position: relative;
+  top: 30%;
+  font-size: 14pt;
+  color: white;
+}
+
+#humidity {
+  position: relative;
+  top: 30%;
+  font-size: 14pt;
+  color: white;
 }
 
 /****************

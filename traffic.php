@@ -1,4 +1,4 @@
-<?php /*Template Name: Traffic Template*/ ?>
+<?php /*Template Name: Traffic */ ?>
 <?php get_header(); ?>
 
 <html>

@@ -206,7 +206,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  var temp, humidity, weatherLocation;
+  var temp, humidity, city;
   var condition = "";
   // Retrieve GPS coordinates using Geolocation
   var lat = position.coords.latitude;
@@ -220,11 +220,10 @@ function showPosition(position) {
 
   getJSON(openWeatherUrl, function weatherInfo (err, data) {
 console.log(data);
-    // TODO: Handle undefined values from OpenWeatherMap
     // Convert temperature from Kelvin to Fahrenheit
     temp = Math.round(data.main.temp * 9 / 5 - 459.67);
     humidity = data.main.humidity;
-    weatherLocation = data.name;
+    city = data.name;
 
     // Collect all conditions, if any
     if (data.weather.length == 0) {
@@ -238,6 +237,7 @@ console.log(data);
         }
       }
     }
+
     // Perform AJAX call to retrieve Geocode JSON
     getJSON(googleUrl, function locationInfo (err, data) {
       var countyAbbr;
@@ -405,7 +405,10 @@ console.log(data);
             }
           }
 
-          x.innerHTML = "<center>" + weatherLocation + "<br>Temp: " + temp + "°F<br>Humidity: " + humidity + "%<br>Condition: " + condition + "<br><br>";
+          // Print current weather of user's location
+          x.innerHTML = "<center><div id=\"square1\"><div id=\"square2\"><div id=\"square3\"><div id=\"city\">" + city + "</div><div id=\"temp\">" +
+                        temp + "<div id=\"degrees\">°F</div></div><div id=\"condition\">" + condition + "</div><div id=\"humidity\">Humidity: " + humidity + "%</div></div></div></div><br>";
+          // x.innerHTML = "<center>" + city + "<br>Temp: " + temp + "°F<br>Humidity: " + humidity + "%<br>Condition: " + condition + "<br><br>";
 
           if (countyCode == "nonUS") {
             x.innerHTML += "<div class=\"box\"><div class=\"weather\">Unable to retrieve weather advisories for locations outside Washington state. Please select a county using the Search by County method. </div></div>";
@@ -433,8 +436,6 @@ console.log(data);
                 if (xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue == "There are no active watches, warnings or advisories") {
                   x.innerHTML += "<div class=\"box\"><div class=\"weather\"><center>There are no active watches, warnings, or advisories for " + countyAbbr + " County.</center>";
                 } else {
-                  // For each weather advisory, gather and print all information
-                  // x.innerHTML = "<center>" + weatherLocation + "<br>Temp: " + temp + "°F<br>Humidity: " + humidity + "%<br>Condition: " + condition;
                   x.innerHTML += "<center> Showing weather advisories for your detected location of " + countyAbbr + " County. </center>";
                   for (i = 1; i < eventNumber; i++) {
                     locations = xmlDoc.getElementsByTagNameNS("urn:oasis:names:tc:emergency:cap:1.1", "areaDesc")[i-1].childNodes[0].nodeValue;
