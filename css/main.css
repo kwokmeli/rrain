@@ -45,7 +45,7 @@ h1 {
 
 /* CSS for individual dividers on index page */
 /* NOTE: These look redundant, but are used to make sure dividers are evenly
-resized when windows are shrunk. See the Exceptions section at bottom for use.*/
+resized when windows are shrunk. See the Exceptions section at bottom for use */
 hr.cloud {
   border: none;
   height: 1px;
@@ -162,7 +162,7 @@ hr.dgobag {
 
 /* CSS for positioning individual images on index page */
 /* NOTE: These look redundant, but are used to make sure icons are evenly
-re-centered when windows are shrunk. See the Exceptions section at bottom for use.*/
+re-centered when windows are shrunk. See the Exceptions section at bottom for use */
 img.cloud {
   position: relative;
   display: inline-block;
@@ -344,7 +344,7 @@ img.logo {
 }
 
 /* CSS for the title "Response and Recovery App in Washington State" on the home page
-header. Disappears when the window size is too small. */
+header. Disappears when the window size is too small */
 .long-title {
   color: white;
   font-family: 'Helvetica';
@@ -355,8 +355,8 @@ header. Disappears when the window size is too small. */
 }
 
 /****************
-* *    Footer     *
-* ****************/
+*     Footer    *
+* ***************/
 
 /* CSS for footer */
 .blog-footer {
@@ -568,80 +568,135 @@ header. Disappears when the window size is too small. */
 }
 
 /* CSS for current weather on WA Weather page */
-#square1 {
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
+#rectangle {
+  width: 60vw;
+  height: 30vw;
+  max-width: 500px;
+  max-height: 250px;
+  min-width: 180px;
+  min-height: 90px;
   background: #00823e;
-  z-index: 1;
-}
-
-#square2 {
-  position: relative;
-  display: inline-block;
-  width: 290px;
-  height: 290px;
-  top: 5px;
-  border-radius: 50%;
-  background: white;
-  z-index: 2;
-}
-
-#square3 {
-  position: relative;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: #00823e;
-  z-index: 3;
-  display: inline-block;
-  top: 5px;
-  text-align: center;
-}
-
-#temp {
-  position: relative;
-  top: 90px;
-  font-size: 48pt;
-  color: white;
-  font-weight: bold;
-}
-
-#degrees {
-  position: absolute;
-  top: -15px;
-  display: inline-block;
-  font-size: 18pt;
-  color: white;
-  font-weight: bold;
+  border: 4px solid white;
+  outline: 4px solid #00823e;
 }
 
 #city {
   position: relative;
-  top: 65px;
-  left: 40px;
-  max-width: 200px;
   font-size: 16pt;
   color: white;
+  top: 20%;
+}
+
+#temp {
+  position: relative;
+  font-size: 48pt;
+  color: white;
+  top: 25%;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+#degrees {
+  position: absolute;
+  display: inline-block;
+  font-size: 18pt;
+  color: white;
+  margin-top: -12px;
+  font-weight: bold;
 }
 
 #condition {
   position: relative;
-  top: 115px;
   font-size: 14pt;
+  top: 30%;
   color: white;
 }
 
 #humidity {
   position: relative;
-  top: 115px;
   font-size: 14pt;
+  top: 28%;
   color: white;
 }
 
 /****************
 *   Exceptions  *
 ****************/
+/* REVIEW: Better way to vertically position weather info for responsive site? */
+@media screen and (max-width: 750px) {
+  #city {
+    font-size: 14pt;
+  }
+
+  #temp {
+    font-size: 44pt;
+  }
+
+  #degrees {
+    font-size: 14pt;
+  }
+
+  #condition {
+    font-size: 12pt;
+  }
+
+  #humidity {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #city {
+    font-size: 12pt;
+    top: 25%;
+  }
+
+  #temp {
+    font-size: 30pt;
+  }
+
+  #degrees {
+    font-size: 10pt;
+    margin-top: -10px;
+  }
+
+  #condition {
+    font-size: 10pt;
+    top: 24%;
+  }
+
+  #humidity {
+    font-size: 10pt;
+    top: 18%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #city {
+    font-size: 12pt;
+    top: 20%;
+  }
+
+  #temp {
+    font-size: 30pt;
+    top: 20%;
+  }
+
+  #degrees {
+    font-size: 10pt;
+    margin-top: -10px;
+  }
+
+  #condition {
+    font-size: 10pt;
+    top: 20%;
+  }
+
+  #humidity {
+    font-size: 10pt;
+    top: 13%;
+  }
+}
 
 @media screen and (max-width: 573px) {
   button {
@@ -662,6 +717,31 @@ header. Disappears when the window size is too small. */
   #foot-img {
     height: 35px;
   }
+
+  #city {
+    font-size: 12pt;
+    top: 15%;
+  }
+
+  #temp {
+    font-size: 30pt;
+    top: 15%;
+  }
+
+  #degrees {
+    font-size: 10pt;
+    margin-top: -10px;
+  }
+
+  #condition {
+    font-size: 10pt;
+    top: 15%;
+  }
+
+  #humidity {
+    font-size: 10pt;
+    top: 8%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -678,9 +758,61 @@ header. Disappears when the window size is too small. */
   }
 }
 
+@media screen and (max-width: 486px) {
+  #city {
+    font-size: 12pt;
+    top: 11%;
+  }
+
+  #temp {
+    font-size: 30pt;
+    top: 11%;
+  }
+
+  #degrees {
+    font-size: 10pt;
+    margin-top: -10px;
+  }
+
+  #condition {
+    font-size: 10pt;
+    top: 11%;
+  }
+
+  #humidity {
+    font-size: 10pt;
+    top: 4%;
+  }
+}
+
 @media screen and (max-width: 449px) {
   img.wa {
     margin-top: 10px;
+  }
+
+  #city {
+    font-size: 12pt;
+    top: 12%;
+  }
+
+  #temp {
+    font-size: 24pt;
+    top: 10%;
+  }
+
+  #degrees {
+    font-size: 8pt;
+    margin-top: -7px;
+  }
+
+  #condition {
+    font-size: 10pt;
+    top: 10%;
+  }
+
+  #humidity {
+    font-size: 10pt;
+    top: 2%;
   }
 }
 
@@ -691,6 +823,31 @@ header. Disappears when the window size is too small. */
 
   hr.chem {
     margin-top: 28px;
+  }
+
+  #city {
+    font-size: 12pt;
+    top: 12%;
+  }
+
+  #temp {
+    font-size: 18pt;
+    top: 8%;
+  }
+
+  #degrees {
+    font-size: 8pt;
+    margin-top: -5px;
+  }
+
+  #condition {
+    font-size: 10pt;
+    top: 4%;
+  }
+
+  #humidity {
+    font-size: 10pt;
+    top: -6%;
   }
 }
 
@@ -711,6 +868,33 @@ header. Disappears when the window size is too small. */
   #foot-img {
     height: 27px;
   }
+ }
+
+ @media screen and (max-width: 400px) {
+   #city {
+     font-size: 10pt;
+     top: 12%;
+   }
+
+   #temp {
+     font-size: 18pt;
+     top: 4%;
+   }
+
+   #degrees {
+     font-size: 8pt;
+     margin-top: -5px;
+   }
+
+   #condition {
+     font-size: 9pt;
+     top: -4%;
+   }
+
+   #humidity {
+     font-size: 9pt;
+     top: -15%;
+   }
  }
 
 @media screen and (max-width: 390px) {
@@ -765,6 +949,33 @@ header. Disappears when the window size is too small. */
   }
 }
 
+@media screen and (max-width: 364px) {
+  #city {
+    font-size: 10pt;
+    top: 8%;
+  }
+
+  #temp {
+    font-size: 14pt;
+    top: 0%;
+  }
+
+  #degrees {
+    font-size: 7pt;
+    margin-top: -3px;
+  }
+
+  #condition {
+    font-size: 9pt;
+    top: -8%;
+  }
+
+  #humidity {
+    font-size: 9pt;
+    top: -20%;
+  }
+}
+
 @media screen and (max-width: 345px) {
   img.flood {
     top: 21px;
@@ -772,6 +983,31 @@ header. Disappears when the window size is too small. */
 
   hr.flood {
     margin-top: 25px;
+  }
+
+  #city {
+    font-size: 10pt;
+    top: 6%;
+  }
+
+  #temp {
+    font-size: 14pt;
+    top: -4%;
+  }
+
+  #degrees {
+    font-size: 7pt;
+    margin-top: -3px;
+  }
+
+  #condition {
+    font-size: 9pt;
+    top: -16%;
+  }
+
+  #humidity {
+    font-size: 9pt;
+    top: -28%;
   }
 }
 

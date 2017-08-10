@@ -406,8 +406,9 @@ console.log(data);
           }
 
           // Print current weather of user's location
-          x.innerHTML = "<center><div id=\"square1\"><div id=\"square2\"><div id=\"square3\"><div id=\"city\">" + city + "</div><div id=\"temp\">" +
-                        temp + "<div id=\"degrees\">°F</div></div><div id=\"condition\">" + condition + "</div><div id=\"humidity\">Humidity: " + humidity + "%</div></div></div></div><br>";
+          x.innerHTML = "<center><div id=\"rectangle\"><div id=\"city\">" + city + "</div><div id=\"temp\">" +
+                        temp + "<div id=\"degrees\">°F</div></div><div id=\"condition\">" + condition + "</div><div id=\"humidity\">Humidity: " +
+                        humidity + "%</div></div><br>";
           // x.innerHTML = "<center>" + city + "<br>Temp: " + temp + "°F<br>Humidity: " + humidity + "%<br>Condition: " + condition + "<br><br>";
 
           if (countyCode == "nonUS") {
