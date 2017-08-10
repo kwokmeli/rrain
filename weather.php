@@ -10,7 +10,11 @@
 
 <div class="weather">
   <center>
-    <div id="countySelect"><br>Select a county to get additional weather advisories.<br><br></div>
+    <br>
+    <div id="currentWeather"></div>
+  </center>
+  <span id="events"></span>
+    <center><div id="countySelect"><br>Select a county to get additional weather advisories.<br><br></div>
     <div class="dropdown">
     <button id="search">SEARCH BY COUNTY</button>
       <div id="counties" class="content">
@@ -54,11 +58,7 @@
         <a class="countyLinks" id="WAC075">Whitman</a>
         <a class="countyLinks" id="WAC077">Yakima</a>
       </div>
-    </div>
-    <br><br>
-    <div id="currentWeather"></div>
-  </center>
-  <span id="events"></span>
+    </div></center>
 </div>
 
 <script>
@@ -220,6 +220,10 @@ function showPosition(position) {
 
   getJSON(openWeatherUrl, function weatherInfo (err, data) {
 console.log(data);
+    if ( typeof data == 'string' ) {
+      data = JSON.parse(data);
+    }
+
     // Convert temperature from Kelvin to Fahrenheit
     temp = Math.round(data.main.temp * 9 / 5 - 459.67);
     humidity = data.main.humidity;

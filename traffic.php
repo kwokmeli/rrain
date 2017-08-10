@@ -23,7 +23,7 @@
       });
 
       function loading() {
-        $("#traffic").append("<center>Loading traffic map, this may take a few minutes <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
+        $("#traffic").append("<center>Loading traffic map <span id=\"el1\">.</span><span id=\"el2\">.</span><span id=\"el3\">.</span></center>");
         var el1 = $("#el1");
         var el2 = $("#el2");
         var el3 = $("#el3");
